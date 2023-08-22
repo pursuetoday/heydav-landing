@@ -13,7 +13,7 @@ spec:
         name: heydev-landing
     spec:
       containers:
-      - image: pribox.azurecr.io/heydev-landing
+      - image: heydev.azurecr.io/heydev-landing
         imagePullPolicy: Always
         name: heydev-landing
         envFrom:
