@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heydev-landing
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      name: heydev-landing
+  template:
+    metadata:
+      labels:
+        name: heydev-landing
+    spec:
+      containers:
+      - image: pribox.azurecr.io/heydev-landing
+        imagePullPolicy: Always
+        name: heydev-landing
+        envFrom:
+        - secretRef:
+            name: "config-heydev-landing"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: heydev-landing
+  labels:
+    name: heydev-landing
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    name: heydev-landing
+---
