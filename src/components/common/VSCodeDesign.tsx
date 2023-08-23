@@ -5,20 +5,11 @@ import VSCodeImage from '/public/images/Vscode_images.svg';
 import VSCodeBack from '/public/images/vscode_black.svg';
 import BackgroundImage from '/public/images/bg-left.svg';
 import BackgroundImageMobile from '/public/images/bg-left-mobile.svg';
-import ContainerWrap from "@/layouts/container-wrap";
-import DynamicContainerWrap from "@/layouts/container-wrap";
+import Container from "@/layouts/container";
 
 export default function VSCode() {
   return (
     <div className="min-h-[35rem] my-[5rem] md:my-[2rem] lg:my-[10rem] relative">
-      <div className="absolute right-0 top-0 mt-[-2rem] px-14 lg:mt-[-6.25rem]">
-        <Image 
-          src={VSCodeBack}
-          alt="VS Code background" 
-          className="max-w-[15rem] lg:max-w-full"
-        />
-      </div>
-
       <div className="hidden lg:block">
         <Image
           fill
@@ -28,20 +19,27 @@ export default function VSCode() {
         />
       </div>
       
-      <div className="flex flex-col md:flex-row items-center justify-center py-5">
-        <div className="hidden lg:block lg:w-1/2 z-20">
-          <div className="mt-[-12.5rem] lg:w-[43.75rem]">
-            <Image 
-              src={VSCodeImage} 
-              alt="VSCode Images" 
-              className="max-w-[35rem] lg:max-w-full"
-            />
+      <Container>
+        <div className="flex flex-col md:flex-row items-center justify-center py-5">
+          <div className="hidden lg:block lg:w-1/2 z-20">
+            <div className="mt-[-12.5rem] lg:w-[43.75rem]">
+              <Image 
+                src={VSCodeImage} 
+                alt="VSCode Images" 
+                className="max-w-[35rem] lg:max-w-full"
+              />
+            </div>
           </div>
-        </div>
-        
-        {/* <ContainerWrap> */}
-          <DynamicContainerWrap>
+          
             <div className="w-full z-20 mt-10 leading-[80px] relative px-5 lg:mt-5 lg:leading-[60px] lg:w-[60%]">
+              <div className="absolute right-0 top-0 mt-[-2rem] px-14 lg:mt-[-6.25rem]">
+                <Image 
+                  src={VSCodeBack}
+                  alt="VS Code background" 
+                  className="max-w-[15rem] lg:max-w-full"
+                />
+              </div>
+
               <h3 className="lg:w-4/5 text-3xl md:text-[38px] font-bold leading-[45px] lg:leading-[57.92px] text-center lg:text-left xl:whitespace-nowrap">
                 Visual Studio Code Extension
               </h3>
@@ -58,9 +56,8 @@ export default function VSCode() {
                 </Link>                
               </div>
             </div>  
-          </DynamicContainerWrap>
-        {/* </ContainerWrap> */}
-      </div>
+        </div>
+      </Container>
       
       {/* Mobile Responsive */}
       <div className="lg:hidden relative mt-10">
