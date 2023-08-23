@@ -26,3 +26,18 @@ export const navigations: NavItem[] = [
     href: '/blogs'
   }
 ]
+
+export const productNav: NavItem[] = [
+  {
+    id: 5,
+    title: 'VS Code Integration',
+    stateName: 'vscode',
+    href: '/vscode'
+  },
+  {
+    id: 6,
+    title: 'Git Hub Integration',
+    stateName: 'github',
+    href: '/github'
+  },
+]

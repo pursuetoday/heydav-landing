@@ -38,7 +38,7 @@ export default function VSCode() {
         </div>
         
         <div className="w-full z-20 mt-10 leading-[80px] relative px-5 md:mt-5 md:leading-[60px] md:w-[60%]">
-          <h3 className="lg:w-4/5 text-3xl md:text-[38px] font-bold leading-[45px] md:leading-[57.92px] text-center md:text-left lg:whitespace-nowrap">
+          <h3 className="lg:w-4/5 text-3xl md:text-[38px] font-bold leading-[45px] md:leading-[57.92px] text-center md:text-left xl:whitespace-nowrap">
             Visual Studio Code Extension
           </h3>
           <p className="lg:w-4/5 text-black text-base font-normal mt-5 leading-6 text-center md:text-left md:leading-normal">

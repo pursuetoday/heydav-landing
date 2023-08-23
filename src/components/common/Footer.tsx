@@ -10,7 +10,7 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 const Footer = () => {
   const { width } = useWindowDimensions();
   return (
-    <footer className="min-h-[22rem] flex flex-col justify-between bg-teal-500 text-white px-4 xs:px-5 sm:px-6 md:py-8 md:px-[100px] lg:px-[120px] custom-container">
+    <footer className="min-h-[22rem] flex flex-col justify-between bg-teal-500 text-white px-4 xs:px-5 sm:px-6 md:py-8 md:px-[100px] lg:px-[120px]">
       <div className="mt-[1rem] flex flex-col md:flex-row justify-between items-center md:items-start">
         <div className="hidden md:flex flex-col items-center md:items-start">
           <Image src={LogoLight} alt="logo" priority />
