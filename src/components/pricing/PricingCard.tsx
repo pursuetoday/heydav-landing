@@ -12,7 +12,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
 }) {
   return (
     <Container>
-      <section className={cn(
+      <div className={cn(
         " bg-white mt-[3rem] mb-[6rem]",
         isHome ? "" : "lg:mb-[9rem]",
       )}>
@@ -104,7 +104,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </Container>
   );
 }

@@ -53,7 +53,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
               </Fragment>
             ))}
           </div>
-          <div className="hidden lg:flex md:justify-center md:items-center md:mt-1">
+          <div className="hidden lg:flex lg:justify-center lg:items-center md:mt-1">
             <Link href='/demo'>
               <OutlineButton 
                 chevron
@@ -112,13 +112,13 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
       </nav>
       <div>
         {showMenu && (
-          <ul
+          <div
             data-aos={`${showMenu ? 'fade-down' : 'fade-up'}`}
             className="min-h-screen flex flex-col items-left justify-start mx-8 lg:hidden"
           >
             <div className="max-h-[calc(100vh-90px)] overflow-y-auto py-4">
               {navigations && !!navigations.length && navigations.map(item => (
-                <Fragment key={item.id}>
+                <ul key={item.id}>
                   {item.title === "Products" ? (
                     <>
                       <li>
@@ -177,7 +177,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                       <hr className="my-2 border-blue-gray-50" />
                     </>
                   )}
-                </Fragment>
+                </ul>
               ))}
               <Link
                 href="/demo"
@@ -198,7 +198,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                 </p>
               </Link>
             </div>
-          </ul>
+          </div>
         )}
       </div>
     </Container>

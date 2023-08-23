@@ -14,7 +14,7 @@ export default function Github({ isGithub=false }: {
 }) {
   const { width } = useWindowDimensions();
   return (
-    <div className="min-h-[35rem] my-[5rem] md:my-[2rem] lg:my-[10rem] relative">
+    <div className="min-h-[35rem] my-[5rem] md:my-[2rem] lg:mt-[10rem] lg:mb-[5rem] relative">
       <div className="hidden lg:block">
         <Image
           fill

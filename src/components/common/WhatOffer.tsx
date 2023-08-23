@@ -14,7 +14,7 @@ export default function WhatOffer({ isGithub=false, isVSCode=false }: {
     const { width } = useWindowDimensions();
     return (
         <Container>
-            <section className="min-h-[30rem] bg-white p-8 mt-[5rem] md:mb-[5rem] lg:mb-0 relative px-5">
+            <div className="min-h-[30rem] bg-white p-8 mt-[5rem] md:mb-[5rem] lg:mb-0 relative px-5">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-teal-500 text-3xl xs:text-4xl font-bold text-center">What do we offer?</h2>
                     <div className="grid grid-cols-1 gap-4 mt-8 md:mt-16 md:grid-cols-2 md:gap-8">
@@ -82,8 +82,8 @@ export default function WhatOffer({ isGithub=false, isVSCode=false }: {
                         </div>
                     </div>
                 </div>
-        </section>
-    </Container>
+            </div>
+        </Container>
     )
   }
   
