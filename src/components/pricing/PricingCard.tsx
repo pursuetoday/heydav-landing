@@ -12,14 +12,16 @@ export default function PricingCard({ isMonthly, isHome=false } : {
 }) {
   return (
     <Container>
-      <div className={cn(
-        " bg-white mt-[3rem] mb-[6rem]",
-        isHome ? "" : "lg:mb-[9rem]",
-      )}>
+      <div 
+        className={cn(
+          " bg-white mt-[3rem] mb-[6rem]",
+          isHome ? "" : "lg:mb-[9rem]",
+        )}
+      >
         <div className="mx-auto max-w-7xl px-5">
           <div className={cn(
             !isHome ? "lg:gap-20" : "",
-            "isolate lg:mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-cols-3"
+            "isolate mt-10 mx-auto grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-cols-3"
           )}>
             {plans && !!plans.length && plans.map((plan) => (
               <div
