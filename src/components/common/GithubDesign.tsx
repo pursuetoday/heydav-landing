@@ -55,7 +55,7 @@ export default function Github({ isGithub=false }: {
             )}>
               <Image 
                 src={GithubImage} 
-                alt="VSCode Images" 
+                alt="GitHub Images" 
                 className="max-w-[35rem] lg:max-w-full"
               />
             </div>
@@ -75,12 +75,10 @@ export default function Github({ isGithub=false }: {
             )}
           />
         </div>
-        <div className={cn(
-          "pl-10 pb-10 z-20 md:flex md:justify-end",
-        )}>
+        <div className="pl-10 pb-10 z-20 md:flex md:justify-end">
           <Image 
             src={GithubImage} 
-            alt="VSCode Images"
+            alt="GitHub Images"
             className="w-full max-w-[38rem]" 
           />
         </div>   
