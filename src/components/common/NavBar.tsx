@@ -1,23 +1,28 @@
+import { Fragment, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Fragment, useState } from "react";
-import { navigations } from "@/constants/nav";
+import { navigations, productNav } from "@/constants/nav";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import OutlineButton from "../ui/OutlineButton";
 import SolidButton from "../ui/SolidButton";
 import Logo from '/public/images/logo_dark.svg';
-import Hamburger from '/public/images/hamburger.svg';
 import DropdownButton from "../ui/DropDownButton";
-import Sidebar from "./Sidebar";
+import { Icons } from "../ui/Icons";
+import { cn } from "@/lib/utils";
 
-export default function Navbar({ activeLink = "home" }: { activeLink?: string }) {
+export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink = "home" }: { 
+  showMenu: boolean
+  activeLink?: string
+  openNavbar: () => void
+  closeNavbar: () => void
+ }) {
   const [active, setActive] = useState<string>(activeLink);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isProductOpen, setIsProductOpen] = useState<boolean>(false);
   const { width } = useWindowDimensions();
 
-  const toggleMobileMenu = () => setIsOpen(!isOpen);
-  const closeMobileMenu = () => setIsOpen(false);
-
+  const triggers = {
+    onClick: () => setIsProductOpen(!isProductOpen)
+  };
   return (
     <>
       <nav className="bg-white w-full h-20 lg:h-[90px] px-4 xs:px-5 sm:px-6 md:px-8 lg:px-10 xl:px-[121px] flex items-center custom-container">
@@ -48,7 +53,7 @@ export default function Navbar({ activeLink = "home" }: { activeLink?: string })
             ))}
           </div>
           <div className="hidden md:flex md:justify-center md:items-center md:mt-1">
-            <Link href='/'>
+            <Link href='/demo'>
               <OutlineButton 
                 chevron
                 withArrow
@@ -57,7 +62,7 @@ export default function Navbar({ activeLink = "home" }: { activeLink?: string })
                 customStyle={"mr-1 lg:mr-[1rem]"} 
               />
             </Link>
-            <Link href='/'>
+            <Link href='/waitlist'>
               <SolidButton
                 withArrow
                 chevron 
@@ -66,17 +71,133 @@ export default function Navbar({ activeLink = "home" }: { activeLink?: string })
               />
             </Link>
           </div>
-          <div className="md:hidden flex">
-            <Image
-              src={Hamburger}
-              alt="hamburger"
-              onClick={toggleMobileMenu}
-              className="cursor-pointer"
-            />
+          <div className="flex items-center md:hidden">
+            <div
+              role="presentation"
+              className="outline-none mobile-menu-button"
+              onClick={showMenu ? closeNavbar : openNavbar}
+            >
+              {showMenu ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 28 28"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className=" w-6 h-6 text-primaryColor "
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </div>
           </div>
         </div>
       </nav>
-      {isOpen && <Sidebar {...{active, setActive}} />}
+      <div>
+        {showMenu && (
+          <ul
+            data-aos={`${showMenu ? 'fade-down' : 'fade-up'}`}
+            className="min-h-screen flex flex-col items-left justify-start mx-8 md:hidden"
+          >
+            {navigations && !!navigations.length && navigations.map(item => (
+              <Fragment key={item.id}>
+                {item.title === "Products" ? (
+                  <>
+                    <li>
+                      <Link
+                        {...triggers}
+                        href=""
+                        className={cn(
+                          'flex space-x-2 py-4 justify-between text-center focus:outline-none',
+                          isProductOpen ? 'text-teal-500' : 'font-[500] text-[#343434]'
+                        )}
+                      >
+                        <p className="block text-sm px-2 transition duration-300">Products</p>
+                        <Icons.chevronDown 
+                          size={18} 
+                          className={cn(
+                            isProductOpen ? "transform rotate-180" : "",
+                            'mt-1'
+                          )} 
+                        />
+                      </Link>
+                    </li>
+                    <hr className="my-2 border-blue-gray-50" />
+                    {isProductOpen && (
+                      <ul data-aos="fade-down" className="py-2 px-1">
+                        {productNav && !!productNav.length && productNav.map(item => (
+                          <>
+                            <Link
+                              href={`/products/${item.href}`}
+                              className={cn(
+                                active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
+                                "flex justify-center items-center py-2"
+                              )}
+                              onClick={() => setActive(item.stateName)}
+                            >
+                              <span className="text-gray-800">{item.title}</span>
+                              <Icons.chevronRight size={22} className="mt-1" />
+                            </Link>
+                            {item.id === 5 && <hr className="my-2 border-blue-gray-50" />}
+                          </>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
+                        "block text-sm px-2 py-4 transition duration-300"
+                      )}
+                      onClick={() => setActive(item.stateName)}
+                    >
+                      {item.title}
+                    </Link>
+                    <hr className="my-2 border-blue-gray-50" />
+                  </>
+                )}
+              </Fragment>
+            ))}
+            <Link
+              href="/demo"
+              // rel="noreferrer"
+              // target="_blank"
+              className="block border-2 text-center mt-8 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-teal-500 font-semibold"
+            >
+              Book a demo
+            </Link>
+            <Link
+              // legacyBehavior
+              // passHref
+              href="/waitlist"
+              style={{ fontWeight: '520' }}
+            >
+              <p className="block mt-5 cursor-pointer bg-teal-500 text-center border-2 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-[#fff]">
+                Join Waitlist
+              </p>
+            </Link>
+          </ul>
+        )}
+      </div>
     </>
   )
 }

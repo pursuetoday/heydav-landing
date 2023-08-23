@@ -87,6 +87,10 @@
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @media (min-width: 1280px) {
   .custom-container {
     padding-left: calc((100vw - 1980px) / 2 + 401px) !important;
