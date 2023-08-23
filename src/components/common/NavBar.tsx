@@ -9,6 +9,7 @@ import Logo from '/public/images/logo_dark.svg';
 import DropdownButton from "../ui/DropDownButton";
 import { Icons } from "../ui/Icons";
 import { cn } from "@/lib/utils";
+import Container from "@/layouts/container";
 
 export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink = "home" }: { 
   showMenu: boolean
@@ -24,8 +25,8 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
     onClick: () => setIsProductOpen(!isProductOpen)
   };
   return (
-    <>
-      <nav className="bg-white w-full h-20 lg:h-[90px] px-4 xs:px-5 sm:px-6 md:px-8 lg:px-10 xl:px-[121px] flex items-center custom-container">
+    <Container>
+      <nav className="bg-white w-full h-20 lg:h-[90px] px-4 xs:px-5 flex items-center">
         <div className="flex justify-between items-center w-full">
           <Link href="/" className="cursor-pointer">
             <Image 
@@ -34,7 +35,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
               priority 
             />
           </Link>
-          <div className="hidden md:flex md:items-center space-x-10 md:space-x-5 md:mt-1.5">
+          <div className="hidden lg:flex md:items-center space-x-10 md:space-x-5 md:mt-1.5">
             {navigations && !!navigations.length && navigations.map(item => (
               <Fragment key={item.id}>
                 {item.title === "Products" ? (
@@ -52,7 +53,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
               </Fragment>
             ))}
           </div>
-          <div className="hidden md:flex md:justify-center md:items-center md:mt-1">
+          <div className="hidden lg:flex lg:justify-center lg:items-center md:mt-1">
             <Link href='/demo'>
               <OutlineButton 
                 chevron
@@ -71,7 +72,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
               />
             </Link>
           </div>
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <div
               role="presentation"
               className="outline-none mobile-menu-button"
@@ -111,93 +112,95 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
       </nav>
       <div>
         {showMenu && (
-          <ul
+          <div
             data-aos={`${showMenu ? 'fade-down' : 'fade-up'}`}
-            className="min-h-screen flex flex-col items-left justify-start mx-8 md:hidden"
+            className="min-h-screen flex flex-col items-left justify-start mx-8 lg:hidden"
           >
-            {navigations && !!navigations.length && navigations.map(item => (
-              <Fragment key={item.id}>
-                {item.title === "Products" ? (
-                  <>
-                    <li>
-                      <Link
-                        {...triggers}
-                        href=""
-                        className={cn(
-                          'flex space-x-2 py-4 justify-between text-center focus:outline-none',
-                          isProductOpen ? 'text-teal-500' : 'font-[500] text-[#343434]'
-                        )}
-                      >
-                        <p className="block text-sm px-2 transition duration-300">Products</p>
-                        <Icons.chevronDown 
-                          size={18} 
+            <div className="max-h-[calc(100vh-90px)] overflow-y-auto py-4">
+              {navigations && !!navigations.length && navigations.map(item => (
+                <ul key={item.id}>
+                  {item.title === "Products" ? (
+                    <>
+                      <li>
+                        <Link
+                          {...triggers}
+                          href=""
                           className={cn(
-                            isProductOpen ? "transform rotate-180" : "",
-                            'mt-1'
-                          )} 
-                        />
-                      </Link>
-                    </li>
-                    <hr className="my-2 border-blue-gray-50" />
-                    {isProductOpen && (
-                      <ul data-aos="fade-down" className="py-2 px-1">
-                        {productNav && !!productNav.length && productNav.map(item => (
-                          <>
-                            <Link
-                              href={`/products/${item.href}`}
-                              className={cn(
-                                active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
-                                "flex justify-center items-center py-2"
-                              )}
-                              onClick={() => setActive(item.stateName)}
-                            >
-                              <span className="text-gray-800">{item.title}</span>
-                              <Icons.chevronRight size={22} className="mt-1" />
-                            </Link>
-                            {item.id === 5 && <hr className="my-2 border-blue-gray-50" />}
-                          </>
-                        ))}
-                      </ul>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
-                        "block text-sm px-2 py-4 transition duration-300"
+                            'flex space-x-2 py-4 justify-between text-center focus:outline-none',
+                            isProductOpen ? 'text-teal-500' : 'font-[500] text-[#343434]'
+                          )}
+                        >
+                          <p className="block text-sm px-2 transition duration-300">Products</p>
+                          <Icons.chevronDown 
+                            size={18} 
+                            className={cn(
+                              isProductOpen ? "transform rotate-180" : "",
+                              'mt-1'
+                            )} 
+                          />
+                        </Link>
+                      </li>
+                      <hr className="my-2 border-blue-gray-50" />
+                      {isProductOpen && (
+                        <ul data-aos="fade-down" className="py-2 px-1">
+                          {productNav && !!productNav.length && productNav.map(item => (
+                            <>
+                              <Link
+                                href={`/products/${item.href}`}
+                                className={cn(
+                                  active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
+                                  "flex justify-center items-center py-2"
+                                )}
+                                onClick={() => setActive(item.stateName)}
+                              >
+                                <span className="text-gray-800">{item.title}</span>
+                                <Icons.chevronRight size={22} className="mt-1" />
+                              </Link>
+                              {item.id === 5 && <hr className="my-2 border-blue-gray-50" />}
+                            </>
+                          ))}
+                        </ul>
                       )}
-                      onClick={() => setActive(item.stateName)}
-                    >
-                      {item.title}
-                    </Link>
-                    <hr className="my-2 border-blue-gray-50" />
-                  </>
-                )}
-              </Fragment>
-            ))}
-            <Link
-              href="/demo"
-              // rel="noreferrer"
-              // target="_blank"
-              className="block border-2 text-center mt-8 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-teal-500 font-semibold"
-            >
-              Book a demo
-            </Link>
-            <Link
-              // legacyBehavior
-              // passHref
-              href="/waitlist"
-              style={{ fontWeight: '520' }}
-            >
-              <p className="block mt-5 cursor-pointer bg-teal-500 text-center border-2 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-[#fff]">
-                Join Waitlist
-              </p>
-            </Link>
-          </ul>
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
+                          "block text-sm px-2 py-4 transition duration-300"
+                        )}
+                        onClick={() => setActive(item.stateName)}
+                      >
+                        {item.title}
+                      </Link>
+                      <hr className="my-2 border-blue-gray-50" />
+                    </>
+                  )}
+                </ul>
+              ))}
+              <Link
+                href="/demo"
+                // rel="noreferrer"
+                // target="_blank"
+                className="block border-2 text-center mt-8 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-teal-500 font-semibold"
+              >
+                Book a demo
+              </Link>
+              <Link
+                // legacyBehavior
+                // passHref
+                href="/waitlist"
+                style={{ fontWeight: '520' }}
+              >
+                <p className="block mt-5 cursor-pointer bg-teal-500 text-center border-2 border-teal-500 rounded-[12px] px-[34px] py-[8px] text-[16px] text-[#fff]">
+                  Join Waitlist
+                </p>
+              </Link>
+            </div>
+          </div>
         )}
       </div>
-    </>
+    </Container>
   )
 }

@@ -10,6 +10,7 @@ import BackgroundImage from '/public/images/bg-left.svg';
 import BackgroundImageMobile from '/public/images/bg-left-mobile.svg';
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import { cn } from "@/lib/utils";
+import Container from "@/layouts/container";
 
 export default function Products() {
   const { width } = useWindowDimensions();
@@ -23,71 +24,73 @@ export default function Products() {
                 className="pr-20 object-cover rounded-r-full"
             />
         </div>
-        <div className="flex flex-col items-center justify-between md:mt-0 sm:flex-row py-16 xl:px-10">
-            <div className="w-full p-16 z-20 sm:w-[65%] lg:w-[55%]">
-                <h3 className="text-teal-500 text-3xl md:text-[40px] font-bold leading-[45px] sm:leading-[57.92px] text-center sm:text-left">
-                    Elevate Your Coding with HeyDev's Sublime Products
-                </h3>
-                <p className="text-black text-base font-normal leading-normal mt-5 text-center sm:text-left">
-                    Discover the power of HeyDev's two sub-products,{" "}
-                    <br className="hidden md:block" /> designed to revolutionize your coding practices.
-                </p>
-                <div className="w-full flex flex-col md:flex-row justify-between items-center xl:justify-start sm:items-start mt-8 gap-6 md:gap-8">
-                    <Link href='/products/github'>
-                        <SolidButton buttonText="Discover GitHub App" customStyle={"h-[48px] px-8"} />
-                    </Link>
-                    <Link href='/products/vscode' className="md:mr-9">
-                        <OutlineButton  buttonText="Discover VSC Extension" customStyle={"h-[48px] px-3"} />
-                    </Link>
-                </div>
-            </div>
-            <div className="hidden sm:flex sm:relative">
-                <div className={cn(
-                    "w-36 h-32 lg:w-56 lg:h-40 absolute sm:right-[20rem] md:right-[25rem] lg:right-[33rem] xl:right-[40rem] bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
-                    width > 767 && width < 803 ? "bottom-[14rem]" : "sm:bottom-[16rem] md:bottom-[12.5rem]"
-                )}>
-                    <div className="w-8 lg:w-12">
-                        <Image src={GitHubIcon} alt="GitHub" />
-                    </div>
-                    <p className="text-center text-md lg:text-lg font-[500]">GitHub</p>
-                </div>
-                <div className={cn(
-                    "w-36 h-32 lg:w-56 lg:h-40 absolute sm:right-[5rem] md:right-[10rem] bottom-[5rem] lg:bottom-[7rem] z-20 bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
-                    width > 767 && width < 803 || 
-                    width > 802 && width < 852 || 
-                    width > 1023 && width < 1310 ? "md:right-[6rem] lg:right-[10rem]" : "md:right-[9rem] lg:right-[14rem]",
-                )}>
-                    <div className="w-8 lg:w-12">
-                        <Image src={VSCodeIconPurple} alt="VSCode Purple" />
-                    </div>
-                    <p className="text-center text-md lg:text-lg font-[500] text-[#3B68FF]">Visual Studio Code</p>
-                </div>
-                <div className={cn(
-                    "w-36 h-32 lg:w-56 lg:h-40 absolute sm:-bottom-10 -bottom-[1rem] lg:right-[25rem] lg:bottom-[0.1rem] bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
-                    width > 767 && width < 803 || 
-                    width > 802 && width < 852 || 
-                    width > 1023 && width < 1310 ? "right-[12rem] lg:right-[20rem]" : "sm:right-[9rem] md:right-[15rem] lg:right-[25rem]",
-                )}>
-                    <div className="w-8 lg:w-12">
-                        <Image src={SecurityIcon} alt="Security Icon" />
-                    </div>
-                    <p className="text-center text-md lg:text-lg font-[500] text-[#587EFF] opacity-80">Security vulnerability</p>
-                </div>
-                <div className={cn(
-                    "w-36 h-32 lg:w-56 lg:h-40 absolute xl:top-8 bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
-                    width > 767 && width < 803 || 
-                    width > 1023 && width < 1310 ? "top-20 right-[6rem] lg:right-[10rem] lg:top-5" : "sm:top-28 md:top-20 right-[12rem] md:right-[8rem] lg:-top-10 xl:right-[12rem]"
-                )}>
-                    <div className="w-8 lg:w-12">
-                        <Image src={LogoIcon} alt="Logo Icon" />
-                    </div>
-                    <p className="text-center text-md lg:text-lg text-teal-500">
-                        <span className="font-normal">Hey</span>{" "}
-                        <span className="font-bold">Dev</span>
+        <Container>
+            <div className="flex flex-col items-center justify-between md:mt-0 sm:flex-row py-16">
+                <div className="w-full py-16 px-5 z-20 sm:w-[65%] lg:w-[55%]">
+                    <h3 className="text-teal-500 text-3xl md:text-[40px] font-bold leading-[45px] sm:leading-[57.92px] text-center sm:text-left">
+                        Elevate Your Coding with HeyDev's Sublime Products
+                    </h3>
+                    <p className="text-black text-base font-normal leading-normal mt-5 text-center sm:text-left">
+                        Discover the power of HeyDev's two sub-products,{" "}
+                        <br className="hidden md:block" /> designed to revolutionize your coding practices.
                     </p>
+                    <div className="w-full flex flex-col md:flex-row justify-between items-center xl:justify-start sm:items-start mt-8 gap-6 md:gap-8">
+                        <Link href='/products/github'>
+                            <SolidButton buttonText="Discover GitHub App" customStyle={"h-[48px] px-8"} />
+                        </Link>
+                        <Link href='/products/vscode' className="md:mr-9">
+                            <OutlineButton  buttonText="Discover VSC Extension" customStyle={"h-[48px] px-3"} />
+                        </Link>
+                    </div>
+                </div>
+                <div className="hidden sm:flex sm:relative">
+                    <div className={cn(
+                        "w-36 h-32 lg:w-56 lg:h-40 absolute sm:right-[20rem] md:right-[25rem] lg:right-[33rem] xl:right-[40rem] bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
+                        width > 767 && width < 803 ? "bottom-[14rem]" : "sm:bottom-[16rem] md:bottom-[12.5rem]"
+                    )}>
+                        <div className="w-8 lg:w-12">
+                            <Image src={GitHubIcon} alt="GitHub" />
+                        </div>
+                        <p className="text-center text-md lg:text-lg font-[500]">GitHub</p>
+                    </div>
+                    <div className={cn(
+                        "w-36 h-32 lg:w-56 lg:h-40 absolute sm:right-[5rem] md:right-[10rem] bottom-[5rem] lg:bottom-[7rem] z-20 bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
+                        width > 767 && width < 803 || 
+                        width > 802 && width < 852 || 
+                        width > 1023 && width < 1310 ? "md:right-[6rem] lg:right-[10rem]" : "md:right-[9rem] lg:right-[14rem] xl:right-[10rem] custom:bottom-[7rem]",
+                    )}>
+                        <div className="w-8 lg:w-12">
+                            <Image src={VSCodeIconPurple} alt="VSCode Purple" />
+                        </div>
+                        <p className="text-center text-md lg:text-lg font-[500] text-[#3B68FF]">Visual Studio Code</p>
+                    </div>
+                    <div className={cn(
+                        "w-36 h-32 lg:w-56 lg:h-40 absolute sm:-bottom-10 -bottom-[1rem] lg:right-[25rem] lg:bottom-[0.1rem] bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
+                        width > 767 && width < 803 || 
+                        width > 802 && width < 852 || 
+                        width > 1023 && width < 1310 ? "right-[12rem] lg:right-[20rem]" : "sm:right-[9rem] md:right-[15rem] lg:right-[25rem] xl:right-[20rem] custom:-bottom-10",
+                    )}>
+                        <div className="w-8 lg:w-12">
+                            <Image src={SecurityIcon} alt="Security Icon" />
+                        </div>
+                        <p className="text-center text-md lg:text-lg font-[500] text-[#587EFF] opacity-80">Security vulnerability</p>
+                    </div>
+                    <div className={cn(
+                        "w-36 h-32 lg:w-56 lg:h-40 absolute xl:top-8 bg-white rounded-lg p-4 gap-2 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
+                        width > 767 && width < 803 || 
+                        width > 1023 && width < 1310 ? "top-20 right-[6rem] lg:right-[10rem] lg:top-5" : "sm:top-28 md:top-20 right-[12rem] md:right-[8rem] lg:-top-10 xl:right-[12rem] custom:right-16"
+                    )}>
+                        <div className="w-8 lg:w-12">
+                            <Image src={LogoIcon} alt="Logo Icon" />
+                        </div>
+                        <p className="text-center text-md lg:text-lg text-teal-500">
+                            <span className="font-normal">Hey</span>{" "}
+                            <span className="font-bold">Dev</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Container>
         {/* Mobile Responsive */}
         <div className="sm:hidden relative">
             <div className="block">
@@ -103,7 +106,7 @@ export default function Products() {
             </div>
             <div className="block">
                 <div className={cn(
-                    "absolute left-8 top-5 bg-white rounded-lg p-3 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
+                    "absolute left-12 top-5 bg-white rounded-lg p-3 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",
                     width < 351 ? "w-20 h-16" : "w-24 h-20 xs:w-32 xs:h-28"
                 )}>
                     <div className={cn(
@@ -114,7 +117,9 @@ export default function Products() {
                     <p className={cn(
                         "text-center font-[500]",
                         width < 351 ? "text-[10px] p-1" : "text-xs p-2"
-                    )}>GitHub</p>
+                    )}>
+                        GitHub
+                    </p>
                 </div>
                 <div className={cn(
                     "z-20 absolute right-1/4 top-14 bg-white rounded-lg p-3 flex flex-col justify-center items-center shadow-md border border-gradient-to-r from-[#D8D8D870] to-[#C9C9C900]",

@@ -33,11 +33,19 @@ const LandingLayout = ({ children, activeLink } : {
   };
 
   useEffect(() => {
+    if (showMenu) {
+      // Add the no-scroll class to the body element when the menu is open
+      document.body.classList.add("no-scroll");
+    } else {
+      // Remove the no-scroll class when the menu is closed
+      document.body.classList.remove("no-scroll");
+    }
+
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [showMenu]);
   return (
     <main>
       <div className={`${font.className} overflow-hidden`}>

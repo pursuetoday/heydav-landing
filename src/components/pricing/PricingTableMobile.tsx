@@ -32,7 +32,7 @@ function PricingTableMobile({ isMonthly, features, featuresProduct, headings }: 
           {featuresProduct && !!featuresProduct.length && featuresProduct?.map(element => {
             return (
               <tr key={element.id} className="odd:bg-[#FCFCFC]">
-                <td className="text-left font-medium w-auto xl:w-[350px] lg:w-[350px] sm:w-[250px] md:w-[350px] p-4 text-[12px] md:text-lg lg:text-lg xl:text-lg border">
+                <td className="text-center font-medium w-auto xl:w-[350px] lg:w-[350px] sm:w-[250px] md:w-[350px] p-4 text-[12px] md:text-lg lg:text-lg xl:text-lg border">
                   {element.feature}
                 </td>
                 <td className="lg:pl-5 md:lg:pl-5 text-center text-[12px] md:text-lg lg:text-lg xl:text-lg border">
@@ -80,7 +80,7 @@ function PricingTableMobile({ isMonthly, features, featuresProduct, headings }: 
           {features && !!features.length && features?.map(element => {
             return (
               <tr key={element.id} className="odd:bg-[#FCFCFC]">
-                <td className="text-left font-medium w-auto xl:w-[350px] lg:w-[350px] sm:w-[250px] md:w-[350px] p-4 text-[12px] md:text-lg lg:text-lg xl:text-lg border">
+                <td className="text-center font-medium w-auto xl:w-[350px] lg:w-[350px] sm:w-[250px] md:w-[350px] p-4 text-[12px] md:text-lg lg:text-lg xl:text-lg border">
                   {element.feature}
                 </td>
                 <td className="lg:pl-5 md:lg:pl-5 text-center text-[12px] md:text-lg lg:text-lg xl:text-lg border">
