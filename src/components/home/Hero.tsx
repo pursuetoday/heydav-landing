@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <Container>
         <section className="bg-white flex items-center mt-[2rem] pt-[2rem] pb-[5rem] flex-col md:mt-0 md:flex-row lg:space-x-16 justify-between lg:px-5">
-            <div className="w-full flex flex-col px-[2rem] sm:px-[2rem] md:mt-16 lg:px-0 lg:w-[50%] lg:mt-24">
+            <div className="w-full flex flex-col px-[2rem] sm:px-[2rem] md:-mx-[12px] md:mt-16 lg:-mx-0 lg:px-0 lg:w-[50%] lg:mt-24">
                 <h1 className="mb-6 text-center md:text-left text-teal-500 font-bold">
                     HeyDev: Empowering
                     {" "}

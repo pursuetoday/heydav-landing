@@ -12,7 +12,6 @@ const config: Config = {
       screens: {
         xs: "425px",
         custom: "1440px",
-        customImg: "1200px",
       },
       maxWidth: {
         max: "1440px",
