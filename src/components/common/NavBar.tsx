@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { navigations, productNav } from "@/constants/nav";
+import Container from "@/layouts/container";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import OutlineButton from "../ui/OutlineButton";
 import SolidButton from "../ui/SolidButton";
@@ -9,7 +10,6 @@ import Logo from '/public/images/logo_dark.svg';
 import DropdownButton from "../ui/DropDownButton";
 import { Icons } from "../ui/Icons";
 import { cn } from "@/lib/utils";
-import Container from "@/layouts/container";
 
 export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink = "home" }: { 
   showMenu: boolean
