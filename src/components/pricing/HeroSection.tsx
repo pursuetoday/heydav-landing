@@ -9,10 +9,10 @@ const HeroSection = ({ isMonthly, setIsMonthly } : {
 }) => {
   return (
     <Container>
-      <div className="flex flex-col justify-between px-4 xs:px-5 md:my-[2rem]">
-        <div className="bg-white flex items-center md:pt-[2rem] md:pb-[5rem] flex-col md:flex-row lg:space-x-24">
-          <div className="h-64 md:w-[80%] flex flex-col justify-center items-center md:mt-10">
-            <h1 className="text-center md:text-left md:text-[70px] md:leading-[85px]">
+      <div className="flex flex-col justify-between px-4 xs:px-5">
+        <div className="bg-white flex items-center justify-center md:pt-[2rem] md:pb-[5rem] flex-col md:flex-row lg:space-x-24">
+          <div className="h-64 flex flex-col justify-center items-center md:mt-10">
+            <h1 className="text-center md:text-[70px] md:leading-[85px]">
                 Choose a
                 <span
                 style={{ fontSize: "inherit", fontWeight: "inherit" }}
@@ -25,11 +25,8 @@ const HeroSection = ({ isMonthly, setIsMonthly } : {
                 that works for you
             </h1>
           </div>
-          <div className="md:mt-10 hidden md:block">
-            <Image src={Box1} alt="Heydev box" width={600} height={600} />
-          </div>
         </div>
-        <div className="md:mt-10">
+        <div className="md:mt-5">
           <ToggleButton isMonthly={isMonthly} setIsMonthly={setIsMonthly} />
         </div>
       </div>

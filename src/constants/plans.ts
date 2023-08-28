@@ -48,10 +48,10 @@ export const plans: PlanType[] = [
   },
   {
     id: 2,
-    name: "Growth",
+    name: "Corporate",
     href: "/",
-    price: { monthly: "$10", annually: "$100" },
-    buttonText: 'Get Growth Plan',
+    price: { monthly: "Custom", annually: "Custom" },
+    buttonText: 'Get Corporate Plan',
     features: [
       {
         id: 1,
@@ -66,7 +66,7 @@ export const plans: PlanType[] = [
       {
         id: 3,
         enabled: true,
-        text: "Upto 10 PR Reviews",
+        text: "Unlimited PR Reviews",
       },
       {
         id: 4,
@@ -95,7 +95,7 @@ export const plans: PlanType[] = [
     id: 3,
     name: "Pro",
     href: "/",
-    price: { monthly: "$30", annually: "$288" },
+    price: { monthly: "$25", annually: "$275" },
     buttonText: 'Get Pro Plan',
     features: [
       {
@@ -111,7 +111,7 @@ export const plans: PlanType[] = [
       {
         id: 3,
         enabled: true,
-        text: "Unlimited PR Reviews",
+        text: "Upto 10 PR Reviews",
       },
       {
         id: 4,

@@ -22,9 +22,9 @@ const Footer = () => {
               <br className="hidden md:block" />code at a deeper level.
             </p>
           </div>
-          <div className="flex flex-col mt-14 md:mt-2 gap-3 md:pr-[10%] lg:pr-[120px] text-center">
+          <div className="flex flex-col mt-14 md:mt-2 gap-3 md:pr-[10%] lg:pr-[130px] text-center md:text-left">
             {footerLinks && !!footerLinks.length && footerLinks.map(item => (
-              <Link key={item.id} href={item.href} className="py-[1px] md:py-0 text-[14px] md:text-[15px] font-semibold text-green-50">
+              <Link key={item.id} href={item.href} className="py-[1px] md:py-0 text-[14px] md:text-[15px]">
                 {item.title}
               </Link>                  
             ))}
@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center py-14 md:py-4">
           <div className="flex flex-col items-center md:hidden py-5">
             <Image src={LogoLight} alt="logo" priority />
-            <p className="text-center md:text-left text-[14px] md:text-[16px] font-[500] px-5 mt-2">
+            <p className="text-center md:text-left text-[14px] md:text-[16px] px-5 mt-2">
               All-in-one solution for developers
               <br className="block" />who want to understand their{" "}
               <br className={cn(

@@ -3,7 +3,7 @@ import Products from "./Products";
 import Github from "../common/GithubDesign";
 import VSCode from "../common/VSCodeDesign";
 import Waitlist from "../common/Waitlist";
-import WhatOffer from "../common/WhatOffer";
+import WhatOffer from "./WhatOffer";
 import PricingCard from "../pricing/PricingCard";
 
 export default function HomeComponent() {

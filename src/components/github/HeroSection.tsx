@@ -9,7 +9,7 @@ export default function GithubHeroSection() {
         </h1>
         <p className="text-center my-6 text-teal-500 font-bold text-xl">
           Your ultimate partner for unparalleled pull request reviews.{" "}
-          <br className="hidden md:block" />Say goodbye to manual, time-consuming reviews and embrace a 
+          <br className="hidden md:block" />Say goodbye to manual, time-consuming reviews and embrace a{" "}
           <br className="hidden md:block" />streamlined process that enhances collaboration and code quality.
         </p>
       </div>

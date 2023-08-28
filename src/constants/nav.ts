@@ -19,24 +19,24 @@ export const navigations: NavItem[] = [
     stateName: 'pricing',
     href: '/pricing'
   },
-  {
-    id: 4,
-    title: 'Blogs',
-    stateName: 'blogs',
-    href: '/blogs'
-  }
+  // {
+  //   id: 4,
+  //   title: 'Blogs',
+  //   stateName: 'blogs',
+  //   href: '/blogs'
+  // }
 ]
 
 export const productNav: NavItem[] = [
   {
     id: 5,
-    title: 'VS Code Integration',
+    title: 'VS Code Ext',
     stateName: 'vscode',
     href: '/vscode'
   },
   {
     id: 6,
-    title: 'Git Hub Integration',
+    title: 'Git Hub Ext',
     stateName: 'github',
     href: '/github'
   },

@@ -1,14 +1,14 @@
 import VSCodeDesign from '../common/VSCodeDesign';
-import WhatOffer from '../common/WhatOffer';
 import Waitlist from "../common/Waitlist";
 import VSCodeHeroSection from "./HeroSection";
+import WhatOfferVS from './WhatOfferVS';
 
 export default function VSCodeComponent() {
   return (
     <>
       <VSCodeHeroSection />
-      <VSCodeDesign />
-      <WhatOffer isVSCode />
+      <VSCodeDesign isVSCode />
+      <WhatOfferVS />
       <Waitlist isVSCode />
     </>
   )

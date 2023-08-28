@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Icons } from "./Icons";
 
-export default function SolidButton({ buttonText, customStyle, withArrow = false, chevron = false, isCustomIconSize = false }: {
+export default function SolidButton({ buttonText, customStyle, withArrow = false, chevron = false, isCustomIconSize = false, }: {
   buttonText: string
   customStyle?: string | null
   withArrow?: boolean
@@ -13,7 +13,7 @@ export default function SolidButton({ buttonText, customStyle, withArrow = false
       {!withArrow ? (
         <button
           className={cn(
-            'cursor-pointer whitespace-nowrap bg-teal-500 rounded-[15px] px-[12px] md:px-[20px] lg:px-[28px] h-[40px] lg:h-[48px] text-white font-bold text-sm lg:text-[16px]',
+            'cursor-pointer whitespace-nowrap bg-gradient-to-r from-teal-500 to-teal-300 rounded-[15px] px-[12px] md:px-[20px] lg:px-[28px] h-[40px] lg:h-[48px] text-white font-bold text-sm lg:text-[16px]',
             customStyle,
           )}
         >
@@ -22,7 +22,7 @@ export default function SolidButton({ buttonText, customStyle, withArrow = false
       ) : (
         <div
           className={cn(
-            'cursor-pointer flex items-center justify-center whitespace-nowrap bg-teal-500 rounded-[15px] px-[12px] md:px-[20px] lg:px-[28px] h-[40px] lg:h-[48px] text-white font-bold text-sm lg:text-[16px]',
+            'cursor-pointer flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-teal-500 to-teal-300 rounded-[15px] px-[12px] md:px-[20px] lg:px-[28px] h-[40px] lg:h-[48px] text-white font-bold text-sm lg:text-[16px]',
             customStyle,
           )}
         >
