@@ -1,4 +1,4 @@
-import { Fragment, MouseEventHandler, useRef, useEffect } from "react";
+import { Fragment } from "react";
 import Image from 'next/image'
 import Logo from "public/images/logo_light.svg";
 import { cn } from "@/lib/utils";
