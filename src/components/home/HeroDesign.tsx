@@ -12,7 +12,10 @@ export default function HeroDesign({ isWaitlist=false }: {
       <Image 
         src={HomeHeroFinal}
         alt="Home Hero"
-        className="w-full md:max-w-[38rem]"
+        className={cn(
+          'w-full md:max-w-[38rem] lg:max-w-none',
+          isWaitlist ? "" : ""
+        )}
       />
     </div>
   )

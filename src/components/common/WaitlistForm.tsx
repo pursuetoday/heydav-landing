@@ -89,7 +89,7 @@ const WaitlistForm = () => {
         />
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
       </div>
-      <div className="flex justify-center lg:justify-end mt-7">
+      <div className="flex justify-center lg:justify-center mt-7">
         <SolidButton
             chevron 
             withArrow

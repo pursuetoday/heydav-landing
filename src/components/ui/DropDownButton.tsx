@@ -27,18 +27,18 @@ export default function DropdownButton() {
         />
       </button>
       {isOpen && (
-        <div className="absolute mt-2 bg-white border border-gray-200 rounded-xl shadow-md w-40">
+        <div className="absolute mt-2 bg-white border border-gray-200 rounded-xl shadow-md w-44">
           <ul>
             <li>
               <Link href="/products/vscode" className="flex justify-between items-center py-2 px-3">
-                <span className="text-gray-800">VS Code Ext</span>
+                <span className="text-gray-800">VSC Extension</span>
                 <Icons.chevronRight size={18} strokeWidth={3} className="mt-1" />
               </Link>
             </li>
             <li className="border-t border-gray-200"></li> 
             <li>
               <Link href="/products/github" className="flex justify-between items-center py-2 px-3">
-                <span className="text-gray-800">Git Hub Ext</span>
+                <span className="text-gray-800">GitHub App</span>
                 <Icons.chevronRight size={18} strokeWidth={3} className="mt-1" />
               </Link>
             </li>
