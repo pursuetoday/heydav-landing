@@ -93,3 +93,31 @@ export type WhatOfferType = {
   title: string
   desc: string
 }
+
+export type FAQType = {
+  questionName: string
+  acceptedAnswerText: string
+}
+
+export type MockData = {
+  slug: string
+  heading: string
+  subHeading: string
+  metaDes: string
+  publishedDate: Date
+  updatedDate: Date
+  author: string
+  authorAvatar: string
+  authorRole: string
+  coverImage: string
+  tags: string[]
+  faq: FAQType[]
+  body: string
+}
+
+type IconType = 'Facebook' | 'LinkedIn' | 'Instagram';
+type SocialsType = {
+  id: number
+  name: IconType
+  getHref: (url : string) => string
+}

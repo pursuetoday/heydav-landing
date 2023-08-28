@@ -1,5 +1,8 @@
 import {
+  ArrowLeft,
   ArrowRight,
+  Blocks,
+  CalendarRange,
   Check,
   Cross,
   CheckCircle,
@@ -11,20 +14,32 @@ import {
   Plus,
   Settings,
   SunMedium,
+  User,
+  Minus,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Copy,
 } from "lucide-react"
 
 export const Icons = {
+  arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
+  category: Blocks,
+  calendar: CalendarRange,
   check: Check,
+  copy: Copy,
   cross: Cross,
   checkCircle: CheckCircle,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   chevronDown: ChevronDown,
   moon: Moon,
+  minus: Minus,
   plus: Plus,
   settings: Settings,
   sun: SunMedium,
+  user: User,
   facebook: ({ ...props }: LucideProps) => (
     <svg width="39" height="39" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path 
@@ -56,4 +71,7 @@ export const Icons = {
       />
     </svg>
   ),
+  facebook2: Facebook,
+  linkedin2: Linkedin,
+  instagram2: Instagram,
 }

@@ -14,7 +14,7 @@ const ToggleButton = ({ isMonthly, setIsMonthly, isCompare=false } : {
     )}>
       <div
         className={cn(
-          isMonthly ? "bg-teal-500 text-white" : "text-neutral-700 opacity-50",
+          isMonthly ? "bg-gradient-to-r from-teal-500 to-teal-300 text-white" : "text-neutral-700 opacity-50",
           'w-[90px] h-[48px] flex justify-center items-center rounded-[15px]',
           width < 320 ? width < 300 ? "text-xs" : "text-sm" : "text-base"
         )}
@@ -24,7 +24,7 @@ const ToggleButton = ({ isMonthly, setIsMonthly, isCompare=false } : {
       </div>
       <div
         className={cn(
-          !isMonthly ? "bg-teal-500 text-white" : "text-neutral-700 opacity-50",
+          !isMonthly ? "bg-gradient-to-r from-teal-500 to-teal-300 text-white" : "text-neutral-700 opacity-50",
           'w-[156px] h-[48px] whitespace-nowrap flex justify-center items-center rounded-[15px] font-semibold',
           width < 320 ? width < 300 ? "text-xs" : "text-sm" : "text-base"
         )}

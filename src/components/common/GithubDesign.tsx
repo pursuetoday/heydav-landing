@@ -1,46 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import SolidButton from "../ui/SolidButton";
-import GithubImage from '/public/images/Github_images.svg';
-import Githubback from '/public/images/github_back.svg';
-import BackgroundImage from '/public/images/bg-right.svg';
-import BackgroundImageMobile from '/public/images/bg-right-mobile.svg';
+import Box2 from '/public/images/final_git_box.svg';
+import FinalGithubImage from '/public/images/final_git.svg';
 import Container from "@/layouts/container";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
-import { cn } from "@/lib/utils";
 
-export default function Github({ isGithub=false }: {
-  isGithub?: boolean
-}) {
-  const { width } = useWindowDimensions();
+export default function Github() {
   return (
-    <div className="min-h-[35rem] my-[5rem] md:my-[2rem] lg:mt-[10rem] lg:mb-[5rem] relative">
-      <div className="hidden lg:block">
-        <Image
-          fill
-          src={BackgroundImage}
-          alt="Background Image"
-          className="pl-8 object-cover"
-        />
-      </div>
+    <div className="min-h-[35rem] my-[3rem] relative">
       <Container>
         <div className="flex flex-col lg:flex-row items-center justify-center px-5 md:px-0">
-          <div className="w-full z-20 mt-10 lg:w-[45%] leading-[80px]">
-            <div className="flex justify-end lg:justify-start">
-              <div className="flex items-center justify-center lg:hidden relative">
-                <h3 className="ml-20 text-3xl xs:text-4xl whitespace-nowrap z-20 absolute xs:pr-12 text">GitHub App</h3>
-              </div>
-              <div className="w-48 xs:-mt-3 xs:mr-10 lg:ml-16 lg:mr-0">
-                <Image 
-                  src={Githubback} 
-                  alt="Github Icon Background" 
-                  className="w-full max-w-[10rem] xs:max-w-[20rem]"
-                />
-                <h3 className="hidden lg:block text-center absolute top-44">GitHub App</h3>
-              </div>
+          <div className="lg:hidden z-20 mt-5">
+            <div className="flex justify-end">
+              <Image 
+                src={Box2}
+                alt="Box2"
+                className="mt-[-2rem] mb-[3.5rem] xs:mb-[3rem]"
+              />
             </div>
-            <p className="w-full text-black text-base font-normal leading-normal mt-5 text-center md:px-5 lg:px-0 lg:text-left lg:w-4/5 xl:-mx-2">
-              HeyDev, your GitHub app for PR-level code reviews, enhances your coding journey. Detailed code insights guide reviewers, while optimization tips boost performance. Security scans safeguard your code, and seamless testing ensures flawless functionality. Elevate your PRs with HeyDev - where coding brilliance meets streamlined reviews!
+            <div className="mt-[-4rem] lg:w-[43.75rem]">
+              <Image 
+                src={FinalGithubImage} 
+                alt="Github Images" 
+                className="w-full md:max-w-[38rem] lg:max-w-[35rem]"
+              />
+            </div>
+          </div>       
+          <div className="w-full z-20 mt-10 lg:w-[40%] leading-[80px] px-5">
+            <h3 className="lg:w-4/5 text-3xl md:text-[38px] font-bold leading-[45px] lg:leading-[57.92px] text-teal-500 text-center lg:text-left xl:whitespace-nowrap">
+              Instant Code Reviews
+            </h3>
+            <p className="w-full text-black text-base font-normal leading-normal mt-5 text-center md:px-5 lg:px-0 lg:text-left lg:w-4/5">
+              <span className="font-bold">HeyDev's GitHub App -</span>{" "} your code review partner in crime.{" "}
+              <br className="hidden lg:block" />Say goodbye to manual PR reviews. HeyDev meticulously analyzes your PRs, providing insightful feedback and actionable suggestions.{" "}
+              <br className="hidden lg:block" />Elevate your team's coding standards and watch your projects shine.
             </p>
             <div className="w-full flex flex-col items-center lg:flex-row lg:justify-center lg:pr-36">
               <Link href='/products/github'>
@@ -48,41 +41,26 @@ export default function Github({ isGithub=false }: {
               </Link>                
             </div>
           </div>   
-          <div className="hidden lg:block lg:w-1/2 z-20">
-            <div className={cn(
-              isGithub ? "mt-[-20rem]" : "mt-[-10rem]",
-              "lg:w-[43.75rem]"
-            )}>
+          <div className="hidden lg:block lg:w-[60%] z-20 relative px-5">
+            <div className="flex justify-end">
               <Image 
-                src={GithubImage} 
-                alt="GitHub Images" 
-                className="max-w-[35rem] lg:max-w-full"
+                src={Box2}
+                alt="Box2"
+                className="mt-[-1rem] mx-[-3rem] custom:mx-[-8rem] lg:max-w-[90%]"
               />
+            </div>
+            <div>
+              <div className="lg:w-[35rem] xl:w-[43.5rem]">
+                <Image 
+                  src={FinalGithubImage} 
+                  alt="GitHub Images" 
+                  className="max-w-[35rem] lg:max-w-[95%]"
+                />
+              </div>
             </div>
           </div>   
         </div>
       </Container>
-      {/* Mobile Responsive */}
-      <div className="lg:hidden relative mt-16 md:mt-28">
-        <div className="block">
-          <Image
-            fill
-            src={BackgroundImageMobile}
-            alt="Background Image"
-            className={cn(
-              "max-w-[45rem] md:min-w-full object-contain rounded-l-full",
-              width > 829 && width < 1024 ? "pl-48" : "pl-10"
-            )}
-          />
-        </div>
-        <div className="pl-10 pb-10 z-20 md:flex md:justify-end">
-          <Image 
-            src={GithubImage} 
-            alt="GitHub Images"
-            className="w-full max-w-[38rem]" 
-          />
-        </div>   
-      </div>
     </div>
   )
 }

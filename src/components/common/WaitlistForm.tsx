@@ -34,7 +34,7 @@ const WaitlistForm = () => {
           />
           {errors.firstName && <p className="text-red-500">{errors.firstName.message}</p>}
         </div>
-        <div className="hidden  md:w-1/2 ml-2 md:block">
+        <div className="hidden md:w-1/2 ml-2 md:block">
           <Controller
             control={control}
             name="lastName"
@@ -51,7 +51,7 @@ const WaitlistForm = () => {
           {errors.lastName && <p className="text-red-500">{errors.lastName.message}</p>}
         </div>
       </div>
-      <div className="mb-4">
+      <div className="mb-4 md:hidden">
           <Controller
             control={control}
             name="lastName"
