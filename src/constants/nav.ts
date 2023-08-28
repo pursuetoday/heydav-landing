@@ -30,13 +30,13 @@ export const navigations: NavItem[] = [
 export const productNav: NavItem[] = [
   {
     id: 5,
-    title: 'VS Code Ext',
+    title: 'VSC Extension',
     stateName: 'vscode',
     href: '/vscode'
   },
   {
     id: 6,
-    title: 'Git Hub Ext',
+    title: 'GitHub App',
     stateName: 'github',
     href: '/github'
   },

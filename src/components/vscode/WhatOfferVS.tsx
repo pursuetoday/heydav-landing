@@ -55,7 +55,7 @@ export default function WhatOfferVS() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex items-center mb-4 md:pt-5 pr-8">
+                            <div className="flex items-center mb-4 md:pt-5 xl:pt-10 pr-8">
                                 <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
                                     <div className="w-9 relative">
                                         <Image src={Icon4} alt="Security vulnerability alerts" />
