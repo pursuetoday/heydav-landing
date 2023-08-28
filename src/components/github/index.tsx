@@ -7,7 +7,7 @@ export default function GitHubComponent() {
   return (
     <>
       <GithubHeroSection />
-      <GithubDesign isGithub />
+      <GithubDesign />
       <WhatOfferGit />
       <Waitlist isGithub/>
     </>
