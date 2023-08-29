@@ -63,9 +63,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
                       "text-2xl font-semibold tracking-tight"
                     )}
                   >
-                    {plan.name === 'Starter' ? 'Free' : 
-                      plan.name === 'Corporate' ? 'Custom' :
-                      isMonthly ? `${plan.price["monthly"]}/month` : `${plan.price["annually"]}/yearly`}
+                    {plan.name === 'Starter' ? 'Free' : isMonthly ? `${plan.price["monthly"]}/month` : `${plan.price["annually"]}/yearly`}
                   </span>
                   <span
                     className={cn(
