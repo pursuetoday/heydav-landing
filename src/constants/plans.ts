@@ -6,6 +6,7 @@ export const plans: PlanType[] = [
     name: "Starter",
     href: "/",
     price: { monthly: "Free", annually: "Free" },
+    caption: { monthly: "", annually: "" },
     buttonText: 'Get Starter Plan',
     features: [
       {
@@ -51,6 +52,7 @@ export const plans: PlanType[] = [
     name: "Pro",
     href: "/",
     price: { monthly: "$10", annually: "$108" },
+    caption: { monthly: "", annually: "" },
     buttonText: 'Get Pro Plan',
     features: [
       {
@@ -93,10 +95,11 @@ export const plans: PlanType[] = [
   },
   {
     id: 3,
-    name: "Corporate",
+    name: "Team",
     href: "/",
-    price: { monthly: "$20", annually: "$216" },
-    buttonText: 'Get Corporate Plan',
+    price: { monthly: "$20", annually: "$197" },
+    caption: { monthly: "$9", annually: "$97" },
+    buttonText: 'Get Team Plan',
     features: [
       {
         id: 1,

@@ -21,11 +21,11 @@ export const comparisonPlans: PricingTier[] = [
   },
   {
     id: "tier-startup",
-    name: "Corporate",
+    name: "Team",
     href: "#",
     abbr: { monthly: 'mo', annually: 'yr' },
     status: { monthly: "billed monthly", annually: "billed annually" },
-    price: { monthly: "$20", annually: "$216" },
+    price: { monthly: "$20", annually: "$197" },
     mostPopular: true,
   },
 ];
