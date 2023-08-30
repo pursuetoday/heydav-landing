@@ -8,6 +8,10 @@ export type NavItem = {
 export type PlanType = {
   id: number
   name: string
+  caption: {
+    monthly: string,
+    annually: string
+  }
   href: string
   price: PriceType
   buttonText: string

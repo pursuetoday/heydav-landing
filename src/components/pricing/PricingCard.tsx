@@ -37,13 +37,13 @@ export default function PricingCard({ isMonthly, isHome=false } : {
               >
                 <div className="flex items-center py-4">
                   <div className={cn(
-                    plan.name !== "Corporate" ? "w-11 h-11 bg-opacity-40 rounded-[14px] bg-teal-500 flex justify-center items-center z-20" : "",
+                    plan.name !== "Team" ? "w-11 h-11 bg-opacity-40 rounded-[14px] bg-teal-500 flex justify-center items-center z-20" : "",
                     )}>
                     <Image 
-                      src={plan.name === "Corporate" ? PircingDiamondComplete : PircingDarts}
-                      alt={plan.name === "Corporate" ? "Pricing Diamond" : "Pricing Darts"}
+                      src={plan.name === "Team" ? PircingDiamondComplete : PircingDarts}
+                      alt={plan.name === "Team" ? "Pricing Diamond" : "Pricing Darts"}
                       className={cn(
-                        plan.name !== "Corporate" ? "w-6 h-6" : "w-11 h-11"
+                        plan.name !== "Team" ? "w-6 h-6" : "w-11 h-11"
                       )}
                       />
                   </div>
@@ -73,9 +73,14 @@ export default function PricingCard({ isMonthly, isHome=false } : {
                   >
                   </span>
                 </p>
+                {plan.name === "Team" && (
+                  <p className="mt-3 flex items-baseline gap-x-1 text-white">
+                    {isMonthly ? `${plan.caption["monthly"]}/month for each team member` : `${plan.caption["annually"]}/year for each team member`}
+                  </p>
+                )}
                 <hr className={cn(
                   "h-px my-4 bg-gray-200 border",
-                  plan.name !== "Corporate" ? "border-black" : ""
+                  plan.name !== "Team" ? "border-black" : ""
                 )} />
                 <ul
                   role="list"
