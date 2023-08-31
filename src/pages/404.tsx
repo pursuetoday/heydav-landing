@@ -2,7 +2,7 @@ import Head from 'next/head'
 import SolidButton from '@/components/ui/SolidButton'
 import Container from '@/layouts/container'
 import Link from 'next/link'
-import Logo from '/public/images/logo_dark.svg';
+import Logo from '/public/images/Asset_6@2x.png';
 import Image from 'next/image';
 
 export default function Page404() {
@@ -14,11 +14,16 @@ export default function Page404() {
       <Container>
         <nav className="bg-white w-full flex items-center h-20 lg:h-[90px]">
             <Link href="/" className="cursor-pointer">
-                <Image 
-                    src={Logo} 
+                <div className="w-[183px]  h-auto">
+                <Image
+                    src={Logo}
                     alt="logo"
-                    priority 
+                    priority
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
                 />
+                </div>
             </Link>
         </nav>
         <div className='custom-container text-center flex justify-between items-center flex-col px-10 py-4 pb-10'>
