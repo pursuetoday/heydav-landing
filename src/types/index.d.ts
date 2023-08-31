@@ -125,3 +125,8 @@ type SocialsType = {
   name: IconType
   getHref: (url : string) => string
 }
+
+export type PATH_AUTH_TYPE = {
+  root: string
+  login: string
+}

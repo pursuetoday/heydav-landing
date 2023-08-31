@@ -82,8 +82,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
                   "h-px my-4 bg-gray-200 border",
                   plan.name !== "Team" ? "border-black" : ""
                 )} />
-                <ul
-                  role="list"
+                <div
                   className={cn(
                     plan.mostPopular ? "text-white" : "text-[#343434]",
                     "mt-8 space-y-3 text-sm leading-6"
@@ -91,7 +90,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
                 >
                   {plan.features &&
                     plan.features.map((feature) => (
-                      <div 
+                      <ul 
                         key={feature.id}
                         className="flex items-center gap-x-3 font-bold"
                       >
@@ -108,9 +107,9 @@ export default function PricingCard({ isMonthly, isHome=false } : {
                         >
                           {feature.text}
                         </li>
-                      </div>
+                      </ul>
                     ))}
-                </ul>
+                </div>
                 <Link href={plan.href} className="flex justify-center items-center mt-6 py-2 px-1">
                   {plan.mostPopular ? (
                     <OutlineButton 

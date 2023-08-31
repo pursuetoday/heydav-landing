@@ -93,7 +93,7 @@ const WaitlistForm = () => {
         <SolidButton
             chevron 
             withArrow
-            buttonText="Get Started"
+            buttonText="Subscribe"
             customStyle={"lg:h-[40px]"}
         />
       </div>

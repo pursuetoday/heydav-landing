@@ -5,11 +5,11 @@ import { navigations, productNav } from "@/constants/nav";
 import Container from "@/layouts/container";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import OutlineButton from "../ui/OutlineButton";
-import SolidButton from "../ui/SolidButton";
 import Logo from '/public/images/Asset_6@2x.png';
 import DropdownButton from "../ui/DropDownButton";
 import { Icons } from "../ui/Icons";
 import { cn } from "@/lib/utils";
+import { PATH_AUTH } from "@/routes";
 
 export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink = "home" }: { 
   showMenu: boolean
@@ -59,21 +59,13 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
             ))}
           </div>
           <div className="hidden lg:flex lg:justify-center lg:items-center md:mt-1">
-            <Link href='/demo'>
+            <Link href={PATH_AUTH.login}>
               <OutlineButton 
                 chevron
                 withArrow
                 isCustomIconSize={width < 1024}
-                buttonText="Book a demo" 
+                buttonText="Login" 
                 customStyle={"mr-1 lg:mr-[1rem]"} 
-              />
-            </Link>
-            <Link href='/waitlist'>
-              <SolidButton
-                withArrow
-                chevron 
-                isCustomIconSize={width < 1024}
-                buttonText="Join Waitlist" 
               />
             </Link>
           </div>
@@ -123,10 +115,10 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
           >
             <div className="max-h-[calc(100vh-90px)] overflow-y-auto py-4">
               {navigations && !!navigations.length && navigations.map(item => (
-                <ul key={item.id}>
+                <div key={item.id}>
                   {item.title === "Products" ? (
                     <>
-                      <li>
+                      <div>
                         <Link
                           {...triggers}
                           href=""
@@ -144,10 +136,10 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                             )} 
                           />
                         </Link>
-                      </li>
+                      </div>
                       <hr className="my-2 border-blue-gray-50" />
                       {isProductOpen && (
-                        <ul data-aos="fade-down" className="py-2 px-1">
+                        <div data-aos="fade-down" className="py-2 px-1">
                           {productNav && !!productNav.length && productNav.map(item => (
                             <>
                               <Link
@@ -164,7 +156,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                               {item.id === 5 && <hr className="my-2 border-blue-gray-50" />}
                             </>
                           ))}
-                        </ul>
+                        </div>
                       )}
                     </>
                   ) : (
@@ -182,25 +174,13 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                       <hr className="my-2 border-blue-gray-50" />
                     </>
                   )}
-                </ul>
+                </div>
               ))}
               <Link
-                href="/demo"
-                // rel="noreferrer"
-                // target="_blank"
+                href={PATH_AUTH.login}
                 className="block border-2 text-center mt-8 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-teal-500 font-semibold"
               >
-                Book a demo
-              </Link>
-              <Link
-                // legacyBehavior
-                // passHref
-                href="/waitlist"
-                style={{ fontWeight: '520' }}
-              >
-                <p className="block mt-5 cursor-pointer bg-teal-500 text-center border-2 border-teal-500 rounded-[12px] px-[34px] py-[8px] text-[16px] text-[#fff]">
-                  Join Waitlist
-                </p>
+                Login
               </Link>
             </div>
           </div>
