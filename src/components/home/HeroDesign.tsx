@@ -16,6 +16,7 @@ export default function HeroDesign({ isWaitlist=false }: {
           'w-full md:max-w-[38rem] lg:max-w-none',
           isWaitlist ? "" : ""
         )}
+        priority
       />
     </div>
   )
