@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoLight from "public/images/logo_light.svg";
+import Logo from "public/images/Asset_8@2x.png";
 import { SOCIAL_MEDIA_LINKS } from "@/routes";
 import { footerLinks } from "@/constants/footer";
 import { Icons } from "../ui/Icons";
@@ -15,8 +16,8 @@ const Footer = () => {
       <footer className="min-h-[22rem] flex flex-col justify-between bg-teal-500 text-white px-4 xs:px-5 md:py-8">
         <div className="mt-[1rem] flex flex-col md:flex-row justify-between items-center md:items-start">
           <div className="hidden md:flex flex-col items-center md:items-start">
-            <Image src={LogoLight} alt="logo" priority />
-            <p className="text-center md:text-left text-[14px] md:text-[16px] font-[500] mt-2 md:mt-5">
+            <Image src={Logo} alt="logo" priority className="w-[30%] h-[30%]"/>
+            <p className="text-center md:text-left text-[14px] md:text-[16px] font-[500] mt-3 md:mt-5">
               All-in-one solution for developers
               <br className="block" />who want to understand their{" "}
               <br className="hidden md:block" />code at a deeper level.
@@ -32,7 +33,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center py-14 md:py-4">
           <div className="flex flex-col items-center md:hidden py-5">
-            <Image src={LogoLight} alt="logo" priority />
+            <Image src={Logo} alt="logo" priority className="w-1/4 h-1/4" />
             <p className="text-center md:text-left text-[14px] md:text-[16px] px-5 mt-2">
               All-in-one solution for developers
               <br className="block" />who want to understand their{" "}

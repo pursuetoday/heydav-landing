@@ -6,7 +6,7 @@ import Container from "@/layouts/container";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import OutlineButton from "../ui/OutlineButton";
 import SolidButton from "../ui/SolidButton";
-import Logo from '/public/images/logo_dark.svg';
+import Logo from '/public/images/Asset_6@2x.png';
 import DropdownButton from "../ui/DropDownButton";
 import { Icons } from "../ui/Icons";
 import { cn } from "@/lib/utils";
@@ -29,11 +29,16 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
       <nav className="bg-white w-full h-20 lg:h-[90px] px-4 xs:px-5 flex items-center">
         <div className="flex justify-between items-center w-full">
           <Link href="/" className="cursor-pointer">
-            <Image 
-              src={Logo} 
-              alt="logo"
-              priority 
-            />
+            <div className="w-[183px]  h-auto">
+              <Image
+                src={Logo}
+                alt="logo"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
+              />
+            </div>
           </Link>
           <div className="hidden lg:flex md:items-center space-x-10 md:space-x-5 md:mt-1.5">
             {navigations && !!navigations.length && navigations.map(item => (
