@@ -28,7 +28,7 @@ const WaitlistForm = () => {
                 {...field}
                 type="text"
                 placeholder="First Name"
-                className="w-full border border-[#B4BCC3] rounded-[12px] p-3 px-6 text-[#919EAB]"
+                className="w-full border border-[#B4BCC3] rounded-[12px] p-3 px-6 text-[#333]"
               />
             )}
           />
@@ -44,7 +44,7 @@ const WaitlistForm = () => {
                 {...field}
                 type="text"
                 placeholder="Last Name"
-                className="w-full border border-[#B4BCC3] rounded-[12px] p-3 px-6 text-[#919EAB]"
+                className="w-full border border-[#B4BCC3] rounded-[12px] p-3 px-6 text-[#333]"
               />
             )}
           />
@@ -61,7 +61,7 @@ const WaitlistForm = () => {
                 {...field}
                 type="text"
                 placeholder="Last Name"
-                className="w-full border border-[#B4BCC3] rounded-[12px] p-3 px-6 text-[#919EAB]"
+                className="w-full border border-[#B4BCC3] rounded-[12px] p-3 px-6 text-[#333]"
               />
             )}
           />
