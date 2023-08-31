@@ -30,7 +30,7 @@ const ToggleButton = ({ isMonthly, setIsMonthly, isCompare=false } : {
         )}
         onClick={() => setIsMonthly(false)}
       >
-        Yearly (save 20%)
+        Yearly (save 10%)
       </div>
     </div>
   );

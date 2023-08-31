@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.heydev.ai
+
+# Sitemaps
+Sitemap: https://www.heydev.ai/sitemap.xml

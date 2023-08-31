@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SolidButton from "../ui/SolidButton";
-import VSCodeImage from '/public/images/Vscode_images.svg';
 import FinalVSCodeImage from '/public/images/final_vscode_image.svg';
-import BackgroundImageMobile from '/public/images/bg-left-mobile.svg';
 import Container from "@/layouts/container";
 import { cn } from "@/lib/utils";
 
@@ -27,9 +25,9 @@ export default function VSCode({ isVSCode }: {
             </div>
           </div>          
           <div className="w-full z-20 mt-10 leading-[80px] relative px-5 lg:mt-5 lg:leading-[60px] lg:w-[60%] lg:ml-10 xl:ml-10">
-            <h3 className="lg:w-4/5 text-3xl md:text-[38px] font-bold leading-[45px] lg:leading-[57.92px] text-teal-500 text-center lg:text-left xl:whitespace-nowrap">
+            <h2 className="lg:w-4/5 text-3xl md:text-[38px] font-bold leading-[45px] lg:leading-[57.92px] text-teal-500 text-center lg:text-left xl:whitespace-nowrap">
               Elevate Your Coding Workflow
-            </h3>
+            </h2>
             <p className="lg:w-4/5 text-black text-base font-normal mt-5 leading-6 text-center lg:text-left lg:leading-normal">
               <span className="font-bold">HeyDev's VSC extension</span>{" "}transforms your IDE into a collaborative powerhouse.{" "}
               <br className="hidden lg:block" />Sync your projects effortlessly and have your coding queries answered instantly by HeyDev.{" "}

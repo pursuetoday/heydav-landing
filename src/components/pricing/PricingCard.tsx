@@ -6,7 +6,6 @@ import { Icons } from "../ui/Icons";
 import OutlineButton from "../ui/OutlineButton";
 import SolidButton from "../ui/SolidButton";
 import Container from "@/layouts/container";
-import PircingDiamond from '/public/images/pricing_diamon.svg';
 import PircingDiamondComplete from '/public/images/pricing_diamond_complete.svg';
 import PircingDarts from '/public/images/pricing_darts.svg';
 
@@ -82,35 +81,30 @@ export default function PricingCard({ isMonthly, isHome=false } : {
                   "h-px my-4 bg-gray-200 border",
                   plan.name !== "Team" ? "border-black" : ""
                 )} />
-                <ul
-                  role="list"
+                <div
                   className={cn(
                     plan.mostPopular ? "text-white" : "text-[#343434]",
                     "mt-8 space-y-3 text-sm leading-6"
                   )}
                 >
-                  {plan.features &&
-                    plan.features.map((feature) => (
-                      <div 
-                        key={feature.id}
-                        className="flex items-center gap-x-3 font-bold"
+                  {plan.features && plan.features.map((feature) => (
+                    <div key={feature.id} className="flex items-center gap-x-3 font-bold">
+                      <span>
+                        {feature.enabled ? (
+                          <Icons.checkCircle className={plan.mostPopular ? "text-white font-bold" : "text-teal-500"}/>
+                        ) : null}
+                      </span>
+                      <span
+                        className={cn(
+                          feature.enabled ? (plan.mostPopular ? "text-white" : "text-[#343434]") : "text-[#919EAB]",
+                          "flex gap-x-3"
+                        )}
                       >
-                        {" "}
-                        <span>
-                          {feature.enabled ? <Icons.checkCircle className={plan.mostPopular ? "text-white font-bold" : "text-teal-500"}/> : null}
-                        </span>
-                        <li
-                          key={feature.id}
-                          className={cn(
-                            feature.enabled ? plan.mostPopular ? "text-white" : "text-[#343434]" : "text-[#919EAB]",
-                            'flex gap-x-3'  
-                          )}
-                        >
-                          {feature.text}
-                        </li>
-                      </div>
-                    ))}
-                </ul>
+                        {feature.text}
+                      </span>
+                    </div>
+                  ))}
+                </div>
                 <Link href={plan.href} className="flex justify-center items-center mt-6 py-2 px-1">
                   {plan.mostPopular ? (
                     <OutlineButton 
