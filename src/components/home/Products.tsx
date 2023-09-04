@@ -7,7 +7,7 @@ import Container from "@/layouts/container";
 
 export default function Products() {
   return (
-    <div className="w-full min-h-[20rem] my-[5rem] lg:my-[7rem] relative">
+    <div className="w-full min-h-[28rem] my-[5rem] lg:mt-0 lg:mb-[5rem] relative bg-[#EAFAF9]">
         <Container>
             <div className="flex flex-col items-center justify-between md:mt-0 lg:flex-row">
                 <div className="flex relative lg:hidden">
