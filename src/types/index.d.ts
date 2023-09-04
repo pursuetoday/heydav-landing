@@ -5,6 +5,15 @@ export type NavItem = {
   href: string
 }
 
+export type RoadMap = {
+  id: number
+  image: any
+  heading: string
+  text: string
+  isReverse: boolean
+  color: string
+}
+
 export type PlanType = {
   id: number
   name: string

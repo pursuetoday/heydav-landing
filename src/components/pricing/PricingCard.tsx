@@ -18,7 +18,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
       <div 
         className={cn(
           " bg-white my-[3rem]",
-          isHome ? "mt-[-3rem]" : "lg:mb-[9rem]",
+          !isHome && "lg:mb-[9rem]",
         )}
       >
         <div className="mx-auto max-w-7xl px-5">
