@@ -82,8 +82,8 @@ function Modal({ showModal, setShowModal, name, list, id }: {
                       role="presentation"
                       key={item.id}
                       className="border border-[#F1F1F1] rounded-full p-1 cursor-pointer  ml-[16px] "
-                      onClick={() =>
-                        window.open(item.getHref(url), '_blank').focus() // eslint-disable-line
+                      onClick={() => 
+                        window.open(item.getHref(url), '_blank')
                       }
                     >
                       <Icon icon={item.icon} color={item.color} height={18} />

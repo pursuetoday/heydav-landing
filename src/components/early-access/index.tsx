@@ -84,12 +84,12 @@ export default function EarlyAccessComponent() {
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 px-5">
         <div className="mt-12">
-          <h1 className="text-[32px]  sm:text-[36px] md:text-[40px] lg:text-[48px] lg:w-[90% text-teal-500">
+          <h1 className="text-center md:text-left text-[32px]  sm:text-[36px] md:text-[40px] lg:text-[48px] lg:w-[90% text-teal-500">
             Reducing Development Time, the Smart Way
           </h1>
           <div>
             {earlyAccessContent && !!earlyAccessContent.length && earlyAccessContent.map(item => (
-              <div key={item.id} className="flex flex-row py-3 pr-3">
+              <div key={item.id} className="flex flex-row py-3 pr-3 mt-2">
                 <div
                   style={{
                     borderRadius: '50%',
@@ -155,7 +155,7 @@ export default function EarlyAccessComponent() {
 
         <div>
           <div className="my-[20px]  md:my-[35px]  sm:my-[20px]">
-            <div className="relative hidden lg:block  h-[145px] mb-[1rem] lg:h-[724px] lg:mb-[1rem] rounded-[12px]">
+            <div className="relative hidden lg:block  h-[145px] mb-[1rem] lg:h-[724px] lg:mb-[1rem] rounded-[12px] mt-32">
               <Image
                 alt="post cover"
                 src={earlyAccess}
