@@ -5,10 +5,16 @@ export type NavItem = {
   href: string
 }
 
+export type EarlyAccess = {
+  id: number
+  heading: string
+}
+
 export type RoadMap = {
   id: number
   image: any
   heading: string
+  subHeading?: string
   text: string
   isReverse: boolean
   color: string
@@ -138,4 +144,19 @@ type SocialsType = {
 export type PATH_AUTH_TYPE = {
   root: string
   login: string
+}
+
+export type earlyAccessUser = {
+  _id: string
+  name: string
+  email: string
+  count: number
+}
+
+export type SocialsTypeModal = {
+  id: number
+  name: string
+  icon: string
+  getHref: (url : string) => string
+  color: string
 }

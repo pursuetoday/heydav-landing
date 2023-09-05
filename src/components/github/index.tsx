@@ -1,5 +1,5 @@
-import GithubDesign from "../common/GithubDesign";
 import Waitlist from "../common/Waitlist";
+import Features from "./Features";
 import GithubHeroSection from "./HeroSection";
 import WhatOfferGit from "./WhatOfferGit";
 
@@ -7,9 +7,9 @@ export default function GitHubComponent() {
   return (
     <>
       <GithubHeroSection />
-      <GithubDesign />
+      <Features />
       <WhatOfferGit />
-      <Waitlist isGithub/>
+      {/* <Waitlist isGithub/> */}
     </>
   )
 }

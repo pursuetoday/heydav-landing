@@ -12,7 +12,7 @@ const ComparePlan = ({ isMonthly, setIsMonthly } : {
 }) => {
   return (
     <Container>
-      <div className="my-10 mx-5">
+      <div className="my-10 mx-5 mb-14 md:mb-20">
         <h2 className="text-center text-3xl md:text-4xl xl:text-5xl my-8 lg:mb-20">Compare plans</h2>
         <div className="hidden items-end w-fit space-x-8 xl:space-x-16 xl:flex">
           <div>

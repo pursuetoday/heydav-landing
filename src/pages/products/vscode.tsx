@@ -1,16 +1,25 @@
 import Head from 'next/head'
+import { forwardRef } from 'react'
 import VSCodeComponent from '@/components/vscode'
 import LandingLayout from '@/layouts/landing'
+import PageTransitions from "@/components/PageTransitions";
 
-export default function VSCode() {
+type IndexPageProps = {}
+type IndexPageRef = React.ForwardedRef<HTMLDivElement>
+
+function VSCode(props: IndexPageProps, ref: IndexPageRef) {
   return (
     <>
         <Head>
-            <title>VS Code Integration | Heydev</title>
+            <title>AI CodeBuddy | Heydev</title>
         </Head>
         <LandingLayout activeLink='products'>
-            <VSCodeComponent />
+          <PageTransitions ref={ref} {...props}>
+              <VSCodeComponent />
+          </PageTransitions>
         </LandingLayout>
     </>
   )
 }
+
+export default forwardRef(VSCode)

@@ -23,9 +23,9 @@ const Footer = () => {
               <br className="hidden md:block" />code at a deeper level.
             </p>
           </div>
-          <div className="flex flex-col mt-14 md:mt-2 gap-3 md:pr-[10%] lg:pr-[130px] text-center md:text-left">
+          <div className="flex flex-col mt-14 gap-3 md:pr-[10%] lg:pr-[130px] text-center md:text-left md:mt-10">
             {footerLinks && !!footerLinks.length && footerLinks.map(item => (
-              <Link key={item.id} href={item.href} className="py-[1px] md:py-0 text-[14px] md:text-[15px]">
+              <Link key={item.id} href={item.href} className="py-[1px] md:py-0 text-[14px] md:text-[15px]" scroll={false}>
                 {item.title}
               </Link>                  
             ))}

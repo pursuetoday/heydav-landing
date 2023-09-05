@@ -11,7 +11,7 @@ export default function DropdownButton() {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left z-20">
       <button
         onClick={toggleDropdown}
         type="button"
@@ -27,19 +27,19 @@ export default function DropdownButton() {
         />
       </button>
       {isOpen && (
-        <div className="absolute mt-2 bg-white border border-gray-200 rounded-xl shadow-md w-44">
+        <div className="absolute mt-2 bg-white border border-gray-200 rounded-xl shadow-md w-52">
           <ul>
             <li>
               <Link href="/products/vscode" className="flex justify-between items-center py-2 px-3">
-                <span className="text-gray-800">VSC Extension</span>
+                <span className="text-gray-800">AI CodeBuddy</span>
                 <Icons.chevronRight size={18} strokeWidth={3} className="mt-1" />
               </Link>
             </li>
             <li className="border-t border-gray-200"></li> 
             <li>
-              <Link href="/products/github" className="flex justify-between items-center py-2 px-3">
-                <span className="text-gray-800">GitHub App</span>
-                <Icons.chevronRight size={18} strokeWidth={3} className="mt-1" />
+              <Link href="/coming-soon" className="flex justify-between items-center py-2 px-3">
+                <span className="text-gray-800">AI QualityGuard  <span className="font-bold text-teal-500">(Coming Soon)</span></span>
+                <Icons.chevronRight size={30} strokeWidth={3} className="mt-1" />
               </Link>
             </li>
           </ul>

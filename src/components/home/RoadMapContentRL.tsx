@@ -3,7 +3,7 @@ import Container from '@/layouts/container'
 import { RoadMap } from '@/types';
 import { cn } from '@/lib/utils';
 
-export default function RoadMapContentLR({ roadMapContent, id }: {
+export default function RoadMapContentRL({ roadMapContent, id }: {
     roadMapContent: RoadMap[]
     id: number
 }) {
@@ -20,7 +20,13 @@ export default function RoadMapContentLR({ roadMapContent, id }: {
                 {roadMapContent[id]?.heading}
             </h2>
             <p className="lg:w-4/5 text-black text-base font-normal mt-5 leading-6 text-center lg:text-left lg:leading-normal">
-                {roadMapContent[id]?.text}
+              {roadMapContent[id]?.subHeading ? (
+                  <span>
+                    <span className='font-bold'>{roadMapContent[id]?.subHeading}</span>{" "}{roadMapContent[id]?.text}
+                  </span>
+                ) : (
+                  <span>{roadMapContent[id]?.text}</span>
+              )}
             </p>
           </div>  
           <div className="lg:block lg:w-[60%] xl:w-[70%] z-20 mt-[6rem]">

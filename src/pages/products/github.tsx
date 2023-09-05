@@ -1,16 +1,25 @@
 import Head from 'next/head'
+import { forwardRef } from 'react'
 import LandingLayout from '@/layouts/landing'
 import GitHubComponent from '@/components/github'
+import PageTransitions from "@/components/PageTransitions";
 
-export default function GitHub() {
+type IndexPageProps = {}
+type IndexPageRef = React.ForwardedRef<HTMLDivElement>
+
+function GitHub(props: IndexPageProps, ref: IndexPageRef) {
   return (
     <>
         <Head>
-            <title>GitHub Integration | Heydev</title>
+            <title>AI QualityGuard | Heydev</title>
         </Head>
         <LandingLayout activeLink='products'>
+          <PageTransitions ref={ref} {...props}>
             <GitHubComponent />
+          </PageTransitions>
         </LandingLayout>
     </>
   )
 }
+
+export default forwardRef(GitHub)

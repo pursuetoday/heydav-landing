@@ -1,8 +1,17 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 import Script from 'next/script'
+import { AnimatePresence } from 'framer-motion'
+import { ToastContainer } from 'react-toastify';
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const pageKey = router.asPath
+
+  const onExitComplete = () => {
+    window.scrollTo({ top: 0 })
+  }
   return (
     <>
       <Script id="google-tag-manager" strategy="lazyOnload">
@@ -14,7 +23,10 @@ export default function App({ Component, pageProps }: AppProps) {
         })(window,document,'script','dataLayer','GTM-M4MP3X9');
       `}
       </Script>
-      <Component {...pageProps} />
+      <AnimatePresence initial={false} onExitComplete={onExitComplete} mode="wait">
+        <Component key={pageKey} {...pageProps} />
+        <ToastContainer />
+      </AnimatePresence>
     </>
   )
 }

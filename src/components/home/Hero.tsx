@@ -16,7 +16,11 @@ export default function Hero() {
                 <p className="pt-3 text-center mb-5 text-[#000] text-[18px] md:text-[22px] lg:text-[22px] xl:text-[22px] leading-[24px] md:leading-[33px] lg:leading-[33px] xl:leading-[33px]  lg:w-[80%]">
                     With tools that facilitate code understanding, security analysis, and intelligent refactoring, coupled with automated test case generation and expedited code reviews, <span className="font-bold">HeyDev.ai</span>{" "} helps you achieve faster software releases without compromising quality.
                 </p>
-                <Link href='/'>
+                <Link 
+                    href='https://calendly.com/heydev/30min'
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <SolidButton
                         chevron
                         withArrow

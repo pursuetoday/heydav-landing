@@ -6,10 +6,11 @@ import Container from '@/layouts/container';
 
 export default function WhatOfferGit() {
     return (
-        <div className="min-h-[30rem] p-8 mt-[2rem] md:mb-[5rem] lg:mb-0 relative px-5 bg-[#EAFAF9]">
+        <div className="min-h-[30rem] p-8 mt-[2rem] md:mb-[5rem] relative px-5 lg:mb-5">
             <Container>
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-teal-500 text-3xl xs:text-4xl font-bold text-center">Features</h2>
+                    <h2 className="text-center font-bold leading-[3.1rem] text-teal-500">How It Works</h2>
+                    <p className="text-center my-4 text-xl">Experience a streamlined, intelligent, and secure code review process with AI QualityGuard - where quality meets efficiency.</p>
                     <div className="grid grid-cols-1 gap-4 mt-8 md:mt-16 md:grid-cols-2 md:gap-8 px-3">                    
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex items-center mb-4">
@@ -19,9 +20,9 @@ export default function WhatOfferGit() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-teal-500 text-xl sm:text-2xl font-medium mb-2">Automated Code Analysis</h3>
+                                    <h3 className="text-teal-500 text-xl sm:text-2xl font-medium mb-2">Instant PR Review</h3>
                                     <p className="text-neutral-800 text-sm sm:text-base font-normal">
-                                        HeyDev's app conducts thorough code reviews at the pull request level, pinpointing issues and potential enhancements.
+                                        <span className='font-bold'>Seamless Integration</span>: As soon as you create a pull request, AI QualityGuard swings into action, scrutinizing the code minutely to offer optimizations and highlight security loopholes.
                                     </p>
                                 </div>
                             </div>
@@ -32,9 +33,9 @@ export default function WhatOfferGit() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-teal-500 text-xl sm:text-2xl font-medium mb-2">Effortless Integration</h3>
+                                    <h3 className="text-teal-500 text-xl sm:text-2xl font-medium mb-2">Intelligent Recommendations</h3>
                                     <p className="text-neutral-800 text-sm sm:text-base font-normal">
-                                        Seamlessly integrates into your GitHub workflow, making code improvement an organic part of your development process.
+                                        <span className='font-bold'>Code Harmony</span>: AI QualityGuard forewarns if the new code might interfere with existing functionalities, facilitating a harmonious integration of new and existing code.
                                     </p>
                                 </div>
                             </div>
@@ -48,9 +49,9 @@ export default function WhatOfferGit() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-teal-500 text-xl sm:text-2xl font-medium mb-2">In-Depth Feedback</h3>
+                                    <h3 className="text-teal-500 text-xl sm:text-2xl font-medium mb-2">Best Practices and Quality Rating</h3>
                                     <p className="text-neutral-800 text-sm sm:text-base font-normal">
-                                        Receive insightful comments directly within GitHub, providing clear explanations and actionable suggestions.
+                                        <span className='font-bold'>Quality at a Glance</span>: AI QualityGuard evaluates the adherence to best practices in your PR and assigns a quality rating out of 10, providing a quick insight into the quality of the code and areas that might need attention.
                                     </p>
                                 </div>
                             </div>

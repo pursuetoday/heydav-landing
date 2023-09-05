@@ -20,7 +20,7 @@ export default function Waitlist({ isGithub=false, isVSCode=false }: {
             <WaitlistForm />            
           </div>
         </div>
-        <div className="my-[3rem]">
+        <div className="my-[3rem] hidden lg:block">
           <HeroDesign isWaitlist />
         </div>
       </div>
