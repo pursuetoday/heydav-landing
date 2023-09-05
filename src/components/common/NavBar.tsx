@@ -10,6 +10,7 @@ import DropdownButton from "../ui/DropDownButton";
 import { Icons } from "../ui/Icons";
 import { cn } from "@/lib/utils";
 import { PATH_AUTH } from "@/routes";
+import SolidButton from "../ui/SolidButton";
 
 export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink = "home" }: { 
   showMenu: boolean
@@ -59,7 +60,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
             ))}
           </div>
           <div className="hidden lg:flex lg:justify-center lg:items-center md:mt-1">
-            <Link href={PATH_AUTH.login}>
+            {/* <Link href={PATH_AUTH.login}>
               <OutlineButton 
                 chevron
                 withArrow
@@ -67,6 +68,15 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                 buttonText="Login" 
                 customStyle={"mr-1 lg:mr-[1rem]"} 
               />
+            </Link> */}
+            <Link href="/early-access" passHref legacyBehavior>
+              <a target="_blank">
+                <SolidButton 
+                  chevron
+                  withArrow
+                  buttonText="Get Early Access"
+                />
+              </a>
             </Link>
           </div>
           <div className="flex items-center lg:hidden">
@@ -143,14 +153,21 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                           {productNav && !!productNav.length && productNav.map(item => (
                             <>
                               <Link
-                                href={`/products/${item.href}`}
+                                href={item.stateName === 'github' ? item.href : `/products/${item.href}`}
                                 className={cn(
                                   active === item.stateName ? "font-bold text-teal-500" : "font-[500] text-[#343434]",
                                   "flex justify-center items-center py-2"
                                 )}
                                 onClick={() => setActive(item.stateName)}
                               >
-                                <span className="text-gray-800">{item.title}</span>
+                                {item.id === 6 ? (
+                                  <span className="text-gray-800">
+                                    {item.title}{" "}<span className="font-bold text-teal-500">(Coming Soon)</span>
+                                  </span>
+                                ) : (
+                                  <span className="text-gray-800">{item.title}</span>
+                                )}
+
                                 <Icons.chevronRight size={22} className="mt-1" />
                               </Link>
                               {item.id === 5 && <hr className="my-2 border-blue-gray-50" />}
@@ -176,11 +193,21 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                   )}
                 </div>
               ))}
-              <Link
+              {/* <Link
                 href={PATH_AUTH.login}
                 className="block border-2 text-center mt-8 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-teal-500 font-semibold"
               >
                 Login
+              </Link> */}
+              <Link
+                legacyBehavior
+                passHref
+                href="/early-access"
+                style={{ fontWeight: '520' }}
+              >
+                <div className="block mt-5 cursor-pointer bg-gradient-to-r from-teal-500 to-teal-300 text-center border-2 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-[#fff]">
+                  <a target="_blank">Get Early Access</a>
+                </div>
               </Link>
             </div>
           </div>

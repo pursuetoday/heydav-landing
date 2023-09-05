@@ -11,7 +11,7 @@ export default function HomeComponent() {
       <RoadMap />
       <Products />
       <PricingCard isMonthly isHome />
-      <Waitlist />
+      {/* <Waitlist /> */}
     </>
   )
 }

@@ -12,7 +12,7 @@ export default function PricingComponent() {
       <HeroSection {...{isMonthly, setIsMonthly}} />
       <PricingCard isMonthly={isMonthly} />
       <ComparePlan {...{isMonthly, setIsMonthly}} />
-      <Waitlist />
+      {/* <Waitlist /> */}
     </>
   )
 }

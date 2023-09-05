@@ -1,5 +1,5 @@
 import { RoadMap } from "@/types";
-import roadmap1 from "public/images/p-1-dup.png";
+import roadmap1 from "public/images/p-1-onboard.png";
 import roadmap2 from "public/images/p-2.png";
 import roadmap3 from "public/images/p-3.png";
 import roadmap4 from "public/images/p-4.png";

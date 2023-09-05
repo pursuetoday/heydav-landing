@@ -53,7 +53,7 @@ export default function Page404() {
                     </defs>
                 </svg>
             </div>
-            <Link href="/" className='mt-10'>
+            <Link href="/" className='mt-10' scroll={false}>
                 <SolidButton buttonText="Go to Home" customStyle={"lg:h-[42px]"} />
             </Link>
         </div>
