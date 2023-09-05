@@ -27,11 +27,11 @@ export default function Products() {
                         <br className="hidden md:block" />collaboration, and a clearer path to mastering your craft.
                     </p>
                     <div className="w-full flex flex-col lg:flex-row justify-between items-center xl:justify-start lg:items-start mt-8 gap-6 md:gap-8">
-                        <Link href='/products/github'>
-                            <SolidButton buttonText="Discover GitHub App" customStyle={"h-[48px] px-8"} />
+                        <Link href='/coming-soon'>
+                            <SolidButton buttonText="AI QualityGuard" customStyle={"h-[48px] px-8"} />
                         </Link>
                         <Link href='/products/vscode' className="lg:mr-9">
-                            <OutlineButton  buttonText="Discover VSC Extension" customStyle={"h-[48px] px-3"} />
+                            <OutlineButton  buttonText="AI CodeBuddy" customStyle={"h-[48px] px-3"} />
                         </Link>
                     </div>
                 </div>
