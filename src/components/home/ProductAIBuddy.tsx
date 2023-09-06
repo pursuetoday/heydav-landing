@@ -28,7 +28,7 @@ export default function ProductAIBuddy() {
                         </div>
                     </div>
                 </div>
-                <div className="absolute rounded-[15px] right-[24%] mt-14">
+                <div className="absolute rounded-[15px] right-[24%] mt-7">
                     <div className="w-56 xl:w-[17rem] h-48 absolute bg-white rounded-[15px] shadow-sm">
                         <div className="flex items-center py-4 px-5">
                             <div className="w-11 h-11 bg-opacity-40 rounded-[14px] bg-teal-300 flex justify-center items-center z-20">
@@ -77,7 +77,7 @@ export default function ProductAIBuddy() {
                         </div>
                     </div>
                 </div>
-                <div className="absolute rounded-[15px] right-[24%] -top-[10.25rem]">
+                <div className="absolute rounded-[15px] right-[24%] -top-48">
                     <div className="w-56 xl:w-[17rem] h-48 absolute bg-white rounded-[15px] shadow-sm">
                         <div className="flex items-center py-4 px-5">
                             <div className="w-11 h-11 bg-opacity-40 rounded-[14px] bg-teal-300 flex justify-center items-center z-20">

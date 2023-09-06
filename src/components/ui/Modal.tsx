@@ -45,7 +45,7 @@ function Modal({ showModal, setShowModal, name, list, id }: {
           className="justify-center  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
         >
           <div className="relative w-auto my-6 mx-auto max-w-3xl">
-            <div className="border-0 m-0 md:m-12 lg:m-12 xl:m-12 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none">
+            <div className="border-0 m-0 md:m-12 lg:m-12 xl:m-12 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none bg-[#EAFAF9]">
               <div className="flex items-center justify-center mt-10    rounded-t dark:border-gray-600">
                 <h3 className="text-xl   font-semibold text-gray-900 dark:text-white">
                   Thank you, {name}
