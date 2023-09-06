@@ -12,7 +12,7 @@ export default function Page404() {
         <title> 404 Page Not Found | Heydev</title>
       </Head>
       <Container>
-        <nav className="bg-white w-full flex items-center h-20 lg:h-[90px]">
+        <nav className="w-full flex items-center h-20 lg:h-[90px]">
             <Link href="/" className="cursor-pointer">
                 <div className="w-[183px]  h-auto">
                 <Image

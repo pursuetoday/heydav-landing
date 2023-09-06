@@ -1,17 +1,31 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Icons } from "./Icons";
 
 export default function DropdownButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeDropdown = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", closeDropdown);
+    return () => {
+      document.removeEventListener("click", closeDropdown);
+    };
+  }, []);
+
   return (
-    <div className="relative inline-block text-left z-20">
+    <div className="relative inline-block text-left z-20" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
         type="button"
@@ -27,7 +41,7 @@ export default function DropdownButton() {
         />
       </button>
       {isOpen && (
-        <div className="absolute mt-2 bg-white border border-gray-200 rounded-xl shadow-md w-52">
+        <div className="absolute mt-2 border border-gray-200 rounded-xl shadow-md w-52">
           <ul>
             <li>
               <Link href="/products/vscode" className="flex justify-between items-center py-2 px-3">

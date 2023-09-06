@@ -14,7 +14,7 @@ export default function ComingSoon() {
         <title> Coming Soon | Heydev</title>
       </Head>
       <Container>
-        <nav className="bg-white w-full flex items-center h-20 lg:h-[90px]">
+        <nav className="w-full flex items-center h-20 lg:h-[90px]">
             <Link href="/" className="cursor-pointer">
                 <div className="w-[183px]  h-auto">
                 <Image

@@ -8,10 +8,6 @@ import { ToastContainer } from 'react-toastify';
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pageKey = router.asPath
-
-  const onExitComplete = () => {
-    window.scrollTo({ top: 0 })
-  }
   return (
     <>
       <Script id="google-tag-manager" strategy="lazyOnload">
@@ -23,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         })(window,document,'script','dataLayer','GTM-M4MP3X9');
       `}
       </Script>
-      <AnimatePresence initial={false} onExitComplete={onExitComplete} mode="wait">
+      <AnimatePresence initial={false} mode="wait">
         <Component key={pageKey} {...pageProps} />
         <ToastContainer />
       </AnimatePresence>
