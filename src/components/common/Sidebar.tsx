@@ -16,7 +16,7 @@ export default function Sidebar({ active, setActive } : {
   const { width } = useWindowDimensions();
   return (
     <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased md:hidden">
-      <div className="fixed top-0 left-0 w-[90%] h-full bg-white shadow-lg">
+      <div className="fixed top-0 left-0 w-[90%] h-full shadow-lg">
         <div className="relative h-full flex flex-col p-4">
           <div className="flex-grow">
             <div className="flex justify-between items-center mb-4">

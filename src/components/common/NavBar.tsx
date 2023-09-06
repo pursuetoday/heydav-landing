@@ -27,7 +27,7 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
   };
   return (
     <Container>
-      <nav className="bg-white w-full h-20 lg:h-[90px] px-4 xs:px-5 flex items-center">
+      <nav className="w-full h-20 lg:h-[90px] px-4 xs:px-5 flex items-center">
         <div className="flex justify-between items-center w-full">
           <Link href="/" className="cursor-pointer">
             <div className="w-[183px]  h-auto">

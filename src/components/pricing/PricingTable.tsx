@@ -10,7 +10,7 @@ export default function PricingTable({ heading, features, featuresProduct }: {
     <>
         <h5 className="my-8 mx-[60px]">{heading}</h5>
         <div className="rounded-lg mx-auto w-full">
-            <table className="w-full bg-white text-left text-sm text-gray-500">
+            <table className="w-full text-left text-sm text-gray-500">
                 <tbody>
                     {featuresProduct && !!featuresProduct.length && featuresProduct.map(element => (
                         <tr key={element.id} className="hover:bg-gray-50">

@@ -17,7 +17,7 @@ export default function PricingCard({ isMonthly, isHome=false } : {
     <Container>
       <div 
         className={cn(
-          " bg-white my-[3rem]",
+          "my-[3rem]",
           !isHome && "lg:mb-[9rem]",
         )}
       >

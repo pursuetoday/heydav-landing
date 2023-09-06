@@ -12,6 +12,7 @@ export default function RoadMap() {
           <RoadMapContentLR roadMapContent={roadmapContent} id={2} />
           <RoadMapContentRL roadMapContent={roadmapContent} id={3} />
           <RoadMapContentLR roadMapContent={roadmapContent} id={4} />
+          <RoadMapContentRL roadMapContent={roadmapContent} id={5} />
         </>
       )}
     </>

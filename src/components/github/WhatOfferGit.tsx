@@ -14,7 +14,7 @@ export default function WhatOfferGit() {
                     <div className="grid grid-cols-1 gap-4 mt-8 md:mt-16 md:grid-cols-2 md:gap-8 px-3">                    
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex items-center mb-4">
-                                <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
+                                <div className="rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
                                     <div className="w-9 relative">
                                         <Image src={Icon1} alt="Detailed code descriptions" />
                                     </div>
@@ -27,7 +27,7 @@ export default function WhatOfferGit() {
                                 </div>
                             </div>
                             <div className="flex items-center mb-4 md:pt-5">
-                                <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
+                                <div className="rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
                                     <div className="w-9 relative">
                                         <Image src={Icon3} alt="Improvement Suggestions" />
                                     </div>
@@ -43,7 +43,7 @@ export default function WhatOfferGit() {
                 
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex items-center mb-4">
-                                <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
+                                <div className="rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
                                     <div className="w-9 relative">
                                         <Image src={Icon2} alt="Write test scripts" />
                                     </div>

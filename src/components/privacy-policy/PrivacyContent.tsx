@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function PrivacyContent() {
   return (
     <Container>
-      <div className="bg-white pb-[2rem] pt-[4rem] lg:pt-[5rem] px-5">
+      <div className="pb-[2rem] pt-[4rem] lg:pt-[5rem] px-5">
         <br />
         <div className="other-header flex justify-between">
           <div>

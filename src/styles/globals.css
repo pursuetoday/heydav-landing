@@ -3,6 +3,9 @@
 @tailwind utilities;
  
 @layer base {
+  body {
+    @apply bg-[#F9F9F9];
+  }
   h1 {
     @apply text-[32px] sm:text-4xl md:text-5xl lg:text-[49px] leading-[42px] lg:leading-[70px] font-bold;
   }
@@ -25,6 +28,19 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+.slider-content {
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @media (min-width: 1280px) {

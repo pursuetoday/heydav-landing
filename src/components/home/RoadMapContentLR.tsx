@@ -40,8 +40,8 @@ export default function RoadMapContentLR({ roadMapContent, id, isProduct=false }
                 <>
                   {id === 0 && (
                     <>
-                      <span className='2xl:hidden custom:block'>{roadMapContent[id]?.heading}</span>
-                      <span className='hidden 2xl:block custom:hidden'>                
+                      <span className='2xl:hidden'>{roadMapContent[id]?.heading}</span>
+                      <span className='hidden 2xl:block'>                
                         Effortless Codebase {" "}
                         <br className='hidden md:block' />Onboarding
                       </span>
@@ -50,8 +50,8 @@ export default function RoadMapContentLR({ roadMapContent, id, isProduct=false }
                   {id === 2 && <span>{roadMapContent[id]?.heading}</span>}
                   {id === 4 && (
                     <>
-                      <span className='2xl:hidden custom:block'>{roadMapContent[id]?.heading}</span>
-                      <span className='hidden 2xl:block custom:hidden'>                
+                      <span className='2xl:hidden'>{roadMapContent[id]?.heading}</span>
+                      <span className='hidden 2xl:block'>                
                         Automated Test Case   {" "}
                         <br className='hidden md:block' />Generation
                       </span>

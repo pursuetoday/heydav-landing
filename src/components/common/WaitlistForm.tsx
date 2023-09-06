@@ -1,5 +1,8 @@
 import { useForm, Controller } from "react-hook-form";
-import SolidButton from "../ui/SolidButton";
+import { Icons } from "../ui/Icons";
+import Toastify from '../ui/Toastify';
+import { API_URL } from '@/config';
+import axios from 'axios';
 
 type FormData = {
   firstName: string;
@@ -8,11 +11,32 @@ type FormData = {
 };
 
 const WaitlistForm = () => {
-  const { control, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const { control, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    // You can perform further actions, like submitting the data to a server
+  const showToast = (message: string, type: string) => {
+    Toastify(message, type);
+  };
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      const result = await axios.post(`${API_URL}/api/newsletter/create`, {
+        firstName: data.firstName,
+        lastName: data?.lastName,
+        email: data?.email,
+      });
+
+      if (result.status === 200) {
+        showToast('You have been subscribed!', 'success');        
+        reset({
+          firstName: "",
+          lastName: "",
+          email: ""
+        });
+      } 
+    } catch (error) {
+      showToast('An error occurred while submitting the form', 'error');
+      console.error(error);
+    }
   };
 
   return (
@@ -90,12 +114,15 @@ const WaitlistForm = () => {
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
       </div>
       <div className="flex justify-center lg:justify-center mt-7">
-        <SolidButton
-            chevron 
-            withArrow
-            buttonText="Subscribe"
-            customStyle={"lg:h-[40px]"}
-        />
+        <button
+          className='cursor-pointer flex items-center justify-center whitespace-nowrap bg-gradient-to-r from-teal-500 to-teal-300 rounded-[15px] px-[12px] md:px-[20px] lg:px-[28px] h-[40px] lg:h-[42px] text-white font-bold text-sm lg:text-[16px]'
+          type="submit"          
+        >
+          <div className="flex items-center justify-center">
+            <span className="mr-1 lg:mr-2">Subscribe</span>
+            <Icons.chevronRight size={24} className="mt-1" />
+          </div>
+        </button>
       </div>
     </form>
   );

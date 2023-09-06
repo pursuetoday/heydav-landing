@@ -10,7 +10,7 @@ const HeroSection = ({ isMonthly, setIsMonthly } : {
   return (
     <Container>
       <div className="flex flex-col justify-between px-4 xs:px-5">
-        <div className="bg-white flex items-center justify-center md:pt-[2rem] md:pb-[5rem] flex-col md:flex-row lg:space-x-24">
+        <div className="flex items-center justify-center md:pt-[2rem] md:pb-[5rem] flex-col md:flex-row lg:space-x-24">
           <div className="h-64 flex flex-col justify-center items-center md:mt-10">
             <h1 className="text-center md:text-[70px] md:leading-[85px]">
                 Choose a

@@ -18,7 +18,7 @@ export default function WhatOfferVS() {
                     <div className="grid grid-cols-1 gap-4 mt-8 md:mt-16 md:grid-cols-2 md:gap-8 px-2">                    
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex items-center mb-4">
-                                <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
+                                <div className="rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4 mb-16 md:mb-32 lg:mb-28">
                                     <div className="w-9 relative">
                                         <Image src={Icon1} alt="Detailed code descriptions" />
                                     </div>
@@ -31,7 +31,7 @@ export default function WhatOfferVS() {
                                 </div>
                             </div>
                             <div className="flex items-center mb-4 md:pt-5">
-                                <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
+                                <div className="rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4 mb-16 md:mb-40 lg:mb-36">
                                     <div className="w-9 relative">
                                         <Image src={Icon3} alt="Improvement Suggestions" />
                                     </div>
@@ -47,7 +47,7 @@ export default function WhatOfferVS() {
                 
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex items-center mb-4">
-                                <div className="bg-white rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4">
+                                <div className="rounded-3xl border border-gray-200 w-20 h-[4.2rem] px-4 flex items-center justify-center text-white mr-4 mb-16 md:mb-52 lg:mb-48">
                                     <div className="w-9 relative">
                                         <Image src={Icon2} alt="Write test scripts" />
                                     </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import LogoLight from "public/images/logo_light.svg";
+import { useRouter } from "next/router";
 import Logo from "public/images/Asset_8@2x.png";
 import { SOCIAL_MEDIA_LINKS } from "@/routes";
 import { footerLinks } from "@/constants/footer";
@@ -10,7 +10,12 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Container from "@/layouts/container";
 
 const Footer = () => {
+  const router = useRouter();
   const { width } = useWindowDimensions();
+
+  const handleFooterLinkClick = (page: string) => {
+    router.push(page, undefined, { shallow: true });
+  };
   return (
     <Container>
       <footer className="min-h-[22rem] flex flex-col justify-between bg-teal-500 text-white px-4 xs:px-5 md:py-8">
@@ -25,9 +30,13 @@ const Footer = () => {
           </div>
           <div className="flex flex-col mt-14 gap-3 md:pr-[10%] lg:pr-[130px] text-center md:text-left md:mt-10">
             {footerLinks && !!footerLinks.length && footerLinks.map(item => (
-              <Link key={item.id} href={item.href} className="py-[1px] md:py-0 text-[14px] md:text-[15px]" scroll={false}>
+              <a
+                key={item.id}
+                onClick={() => handleFooterLinkClick(item.href)}
+                className="py-[1px] md:py-0 text-[14px] md:text-[15px] cursor-pointer"
+              >
                 {item.title}
-              </Link>                  
+              </a>                  
             ))}
           </div>
         </div>

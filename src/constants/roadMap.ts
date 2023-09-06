@@ -43,7 +43,7 @@ export const roadmapContent: RoadMap[] = [
     id: 4,
     image: roadmap5,
     heading: "Automated Test Case Generation",
-    text: "Ensure your code’s robustness with comprehensive test scenarios, without the manual effort. HeyDev.ai crafts test cases and scripts for you, accelerating your testing phase and assuring quality at every step.",
+    text: "Ensure your code's robustness with comprehensive test scenarios, without the manual effort. HeyDev.ai crafts test cases and scripts for you, accelerating your testing phase and assuring quality at every step.",
     isReverse: true,
     color: "#EAFAF9",
   },

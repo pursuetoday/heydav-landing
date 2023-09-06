@@ -9,7 +9,7 @@ export default function RoadMapContentRL({ roadMapContent, id }: {
 }) {
   return (
     <div className={cn(
-      "min-h-[30rem] relative bg-white px-5",
+      "min-h-[30rem] relative px-5",
       id === 5 ? "" : "md:my-[2rem]",
       id === 3 && "md:mt-[4rem] md:mb-[2rem]",
     )}>      

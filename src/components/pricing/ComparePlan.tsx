@@ -24,7 +24,7 @@ const ComparePlan = ({ isMonthly, setIsMonthly } : {
               <div 
                 key={plan.id} 
                 className={cn(
-                  plan.mostPopular ? 'bg-gradient-to-r from-teal-500 to-teal-300 text-white' : 'bg-white text-[#343434]',
+                  plan.mostPopular ? 'bg-gradient-to-r from-teal-500 to-teal-300 text-white' : 'text-[#343434]',
                   'w-52 h-40 relative p-4 border border-slate-300 rounded-xl text-center flex flex-col justify-between'
                 )}
               >
@@ -36,7 +36,7 @@ const ComparePlan = ({ isMonthly, setIsMonthly } : {
                   }
                 </p>
                 <button className={cn(
-                  plan.mostPopular ? 'bg-white text-teal-500 hover:bg-teal-500 hover:text-white' : 'bg-gradient-to-r from-teal-500 to-teal-300 text-white hover:text-teal-100',
+                  plan.mostPopular ? 'text-teal-500 hover:bg-teal-500 hover:text-white bg-white' : 'bg-gradient-to-r from-teal-500 to-teal-300 text-white hover:text-teal-100',
                   'border rounded-lg p-2 text-sm font-medium flex justify-center items-center'
                 )}>
                   <span className="mr-1">{`Get ${plan.name} Plan`}</span>
