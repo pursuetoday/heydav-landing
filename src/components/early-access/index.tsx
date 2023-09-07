@@ -12,7 +12,7 @@ import { earlyAccessUser } from '@/types';
 import { API_URL } from '@/config';
 
 interface EarlyAccessUserData {
-  early_access_users: earlyAccessUser[]
+  data: earlyAccessUser[]
 }
 
 export default function EarlyAccessComponent() {
@@ -61,9 +61,12 @@ export default function EarlyAccessComponent() {
 
   const getAllWaitList = async () => {
     try {
-      const result: AxiosResponse<EarlyAccessUserData> = await axios.post(`${API_URL}/api/earlyaccess/get-access`);
-      if (result.status === 200) {
-        setList(result?.data?.early_access_users);
+      const result: AxiosResponse<EarlyAccessUserData> = await axios.post(`${API_URL}/api/earlyaccess/get-access`, {
+        isLanding: true
+      });
+
+      if (result && result.status === 200) {
+        setList(result?.data?.data);
         setShowModal(true);
         setEmail('');
         setName('');
@@ -119,6 +122,7 @@ export default function EarlyAccessComponent() {
             </label>
             <TextField
               type="text"
+              value={name}
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
             />
@@ -129,6 +133,7 @@ export default function EarlyAccessComponent() {
             <TextField
               error={error}
               type="email"
+              value={email}
               placeholder="Email Address"
               onChange={onChangeEmail}
             />
