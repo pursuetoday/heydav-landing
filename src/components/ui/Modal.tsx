@@ -114,7 +114,7 @@ function Modal({ showModal, setShowModal, name, list, id }: {
                       </tr>
                     </thead>
                     <tbody className="max-h-[200px] border">
-                      {list && !!list.length && list.slice(id - 3, id).map(item => {
+                      {list && !!list.length && list.slice(0, 3).map(item => {
                         const waitListName = convertStringToPascal(item.name);
                         return (
                           <tr
