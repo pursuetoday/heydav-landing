@@ -5,7 +5,7 @@ import Container from "@/layouts/container";
 export default function Hero() {
   return (
     <Container>
-        <div className="flex justify-center md:px-12 pb-[2rem] pt-[4rem] lg:pt-[5rem]">
+        <div className="flex justify-center md:px-12 pb-[3rem] pt-[4rem] lg:pt-[5rem]">
             <div className="flex flex-col items-center md:w-[90%]">
                 <h1 className="text-[28px] leading-9 text-center sm:text-[28px] md:text-[54px] lg:text-[54px] md:leading-[4rem] lg:leading-[4rem] lg:max-w-[90%] text-teal-500">
                     Code Better, Ship Faster
@@ -20,6 +20,7 @@ export default function Hero() {
                     href='https://calendly.com/heydev/30min'
                     target="_blank"
                     rel="noreferrer"
+                    className="z-40"
                 >
                     <SolidButton
                         chevron
