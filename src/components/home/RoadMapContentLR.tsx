@@ -21,7 +21,8 @@ export default function RoadMapContentLR({ roadMapContent, id, isProduct=false }
             )}>
               <Image 
                 src={roadMapContent[id]?.image} 
-                alt={roadMapContent[id]?.heading} 
+                alt={roadMapContent[id]?.heading}
+                blurDataURL={roadMapContent[id]?.image} 
                 className={cn(
                   "w-full md:max-w-[38rem] lg:max-w-[80%] xl:max-w-[90%]",
                 )}
@@ -76,7 +77,8 @@ export default function RoadMapContentLR({ roadMapContent, id, isProduct=false }
             )}>
               <Image 
                 src={roadMapContent[id]?.image} 
-                alt={roadMapContent[id]?.heading} 
+                alt={roadMapContent[id]?.heading}
+                blurDataURL={roadMapContent[id]?.image}  
                 className="w-full xs:max-w-[30rem] md:max-w-[38rem]"
                 priority
               />

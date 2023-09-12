@@ -33,7 +33,8 @@ export default function RoadMapContentRL({ roadMapContent, id }: {
             <div className="mt-[-5rem] lg:w-[43.75rem] xl:w-[48rem] 2xl:w-[55rem]">
               <Image 
                 src={roadMapContent[id]?.image} 
-                alt={roadMapContent[id]?.heading} 
+                alt={roadMapContent[id]?.heading}
+                blurDataURL={roadMapContent[id]?.image}  
                 className="w-full md:max-w-[38rem] lg:max-w-[80%] xl:max-w-[90%]"
                 priority
               />
