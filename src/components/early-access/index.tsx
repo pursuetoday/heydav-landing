@@ -20,7 +20,7 @@ export default function EarlyAccessComponent() {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [name, setName] = useState<string>('');
-  const [id, setId] = useState<number>(0);
+  const [id, setId] = useState<number>(-1);
   const [error, setError] = useState<boolean>(false);
 
   function isValidEmail(email: string) {
@@ -66,24 +66,26 @@ export default function EarlyAccessComponent() {
   };
 
   useEffect(() => {
-    const getAllWaitList = async () => {
-      try {
-        const result: AxiosResponse<EarlyAccessUserData> = await axios.post(`${API_URL}/api/earlyaccess/get-access`, {
-          isLanding: true
-        });
-  
-        if (result && result.status === 200) {
-          setList(result?.data?.data);
-          setShowModal(true);
-          setEmail('');
-          setName('');
+    if (id !== -1) {
+      const getAllWaitList = async () => {
+        try {
+          const result: AxiosResponse<EarlyAccessUserData> = await axios.post(`${API_URL}/api/earlyaccess/get-access`, {
+            isLanding: true
+          });
+    
+          if (result && result.status === 200) {
+            setList(result?.data?.data);
+            setShowModal(true);
+            setEmail('');
+            setName('');
+          }
+        } catch (error) {
+          console.error(error);
         }
-      } catch (error) {
-        console.error(error);
-      }
-    };
+      };
 
-    getAllWaitList();
+      getAllWaitList();
+    }
   }, [id])
 
   return (
