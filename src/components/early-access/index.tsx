@@ -47,31 +47,13 @@ export default function EarlyAccessComponent() {
         email
       });
 
-      if (result.status === 200) {
+      if (result && result.status === 200) {
         setEmail('');
         setName('');
         setId(result?.data?.count);
-        getAllWaitList();
       } 
     } catch (error) {
       showToast('An error occurred while submitting the form', 'error');
-      console.error(error);
-    }
-  };
-
-  const getAllWaitList = async () => {
-    try {
-      const result: AxiosResponse<EarlyAccessUserData> = await axios.post(`${API_URL}/api/earlyaccess/get-access`, {
-        isLanding: true
-      });
-
-      if (result && result.status === 200) {
-        setList(result?.data?.data);
-        setShowModal(true);
-        setEmail('');
-        setName('');
-      }
-    } catch (error) {
       console.error(error);
     }
   };
@@ -82,6 +64,27 @@ export default function EarlyAccessComponent() {
       setError(false);
     }
   };
+
+  useEffect(() => {
+    const getAllWaitList = async () => {
+      try {
+        const result: AxiosResponse<EarlyAccessUserData> = await axios.post(`${API_URL}/api/earlyaccess/get-access`, {
+          isLanding: true
+        });
+  
+        if (result && result.status === 200) {
+          setList(result?.data?.data);
+          setShowModal(true);
+          setEmail('');
+          setName('');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getAllWaitList();
+  }, [id])
 
   return (
     <Container>

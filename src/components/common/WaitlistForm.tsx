@@ -25,7 +25,7 @@ const WaitlistForm = () => {
         email: data?.email,
       });
 
-      if (result.status === 200) {
+      if (result && result.status === 200) {
         showToast('You have been subscribed!', 'success');        
         reset({
           firstName: "",
