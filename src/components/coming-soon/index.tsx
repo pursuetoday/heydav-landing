@@ -17,7 +17,7 @@ export default function ComingSoonComponent() {
         </div>
         <Link href='/'>
             <SolidButton 
-                buttonText="Go to Home"
+                buttonText="Home"
             />
         </Link>
     </Container>

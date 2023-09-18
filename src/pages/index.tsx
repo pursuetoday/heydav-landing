@@ -11,7 +11,7 @@ function Home(props: IndexPageProps, ref: IndexPageRef) {
   return (
     <>
       <Head>
-        <title>Home | Heydev</title>
+        <title>Heydev.ai - Code Better, Ship Faster</title>
       </Head>
       <LandingLayout activeLink="home">
         <PageTransitions ref={ref} {...props}>

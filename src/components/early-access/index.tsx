@@ -88,7 +88,7 @@ export default function EarlyAccessComponent() {
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 px-5">
         <div className="mt-12">
           <h1 className="text-center md:text-left text-[32px]  sm:text-[36px] md:text-[40px] lg:text-[48px] lg:w-[90% text-teal-500">
-            Reducing Development Time, the Smart Way
+            Reducing Development Time, with AI
           </h1>
           <div>
             {earlyAccessContent && !!earlyAccessContent.length && earlyAccessContent.map(item => (

@@ -29,10 +29,10 @@ export default function Protection() {
             <div className="z-40 flex flex-col items-center mt-10">
                 <div className='z-20 flex flex-col items-center mt-16'>
                     <h2 className="text-3xl md:text-[38px] font-bold leading-[45px] lg:leading-[57.92px] text-teal-500 text-center lg:text-left xl:whitespace-nowrap">
-                        Protecting Your Work, Every Line of Code
+                    Committed to Your Data Security
                     </h2>
                     <h3 className="text-[20px] leading-9 text-center sm:text-[20px] md:text-[20px] xl:text-[25px] lg:max-w-[90%] my-2 font-normal p-2">
-                        HeyDev relies on high-quality tech and strong encryption. It also uses smart AI to quickly stop any insecure coding mistakes as they happen.
+                        We uphold a security-first philosophy, ensuring the utmost safety of your code and data at every step.
                     </h3>
                 </div>
                 <div className="z-20 flex flex-col lg:flex-row justify-center items-center mt-10 px-3 gap-6 lg:gap-14 lg:mt-12">
@@ -48,10 +48,10 @@ export default function Protection() {
                                 </div>
                         </div>
                         <h4 className='text-white text-lg font-semibold px-6'>
-                            Code Sync & Encryption
+                            Unwavering Data Protection
                         </h4>
                         <p className="text-white text-sm lg:text-base font-medium leading-normal px-6 z-20 mt-2 mb-4">
-                            Easily sync your code with our platform while we handle encryption and protection. Your code remains confidential and intact during synchronization
+                            We employ stringent policies to safeguard your code from unauthorized access or leaks.
                         </p>
                     </div>
                     <div className="bg-teal-500 p-2 m-2 rounded-lg w-full md:w-3/4 xl:w-1/3 xl:h-[16rem]">
@@ -66,10 +66,10 @@ export default function Protection() {
                                 </div>
                         </div>
                         <h4 className='text-white text-lg font-semibold px-6'>
-                            Dedicated Support
+                            Transparent Usage Policies
                         </h4>
                         <p className="text-white text-sm lg:text-base font-medium leading-normal px-6 z-20 mt-2 mb-4">
-                            Our security experts are here to assist you. Reach out with any security concerns or questions, and we'll provide the support you need.
+                            We are committed to transparent operations, utilizing your data solely to enhance your experience, never for unauthorized purposes.
                         </p>
                     </div>
                 </div>

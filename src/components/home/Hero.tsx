@@ -11,7 +11,7 @@ export default function Hero() {
                     Code Better, Ship Faster
                 </h1>
                 <h2 className="text-[20px] leading-9 text-center sm:text-[20px] md:text-[40px] lg:text-[40px] md:leading-[4rem] lg:leading-[4rem] lg:max-w-[90%] my-2">
-                    Reducing Development Time, the Smart Way
+                    Reducing Development Time, with AI
                 </h2>
                 <p className="pt-3 text-center mb-5 text-[#000] text-[18px] md:text-[22px] lg:text-[22px] xl:text-[22px] leading-[24px] md:leading-[33px] lg:leading-[33px] xl:leading-[33px]  lg:w-[80%]">
                     With tools that facilitate code understanding, security analysis, and intelligent refactoring, coupled with automated test case generation and expedited code reviews, <span className="font-bold">HeyDev.ai</span>{" "} helps you achieve faster software releases without compromising quality.

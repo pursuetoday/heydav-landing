@@ -8,9 +8,9 @@ export default function HomeComponent() {
   return (
     <>
       <Hero />
-      <Protection />
       <RoadMap />
       <Products />
+      <Protection />
       <Waitlist />
     </>
   )

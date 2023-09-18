@@ -23,9 +23,9 @@ const Footer = () => {
           <div className="hidden md:flex flex-col items-center md:items-start">
             <Image src={Logo} alt="logo" priority className="w-[30%] h-[30%]"/>
             <p className="text-center md:text-left text-[14px] md:text-[16px] font-[500] mt-3 md:mt-5">
-              All-in-one solution for developers
-              <br className="block" />who want to understand their{" "}
-              <br className="hidden md:block" />code at a deeper level.
+              HeyDev.ai helps you.
+              <br className="block" />achieve faster software releases{" "}
+              <br className="hidden md:block" />without compromising quality.
             </p>
           </div>
           <div className="flex flex-col mt-14 gap-3 md:pr-[10%] lg:pr-[130px] text-center md:text-left md:mt-10">
