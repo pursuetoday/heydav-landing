@@ -32,7 +32,7 @@ export const productNav: NavItem[] = [
     id: 5,
     title: 'AI Code Buddy',
     stateName: 'vscode',
-    href: '/vscode'
+    href: 'vscode'
   },
   {
     id: 6,

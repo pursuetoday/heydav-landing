@@ -3,13 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { navigations, productNav } from "@/constants/nav";
 import Container from "@/layouts/container";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
-import OutlineButton from "../ui/OutlineButton";
 import Logo from '/public/images/Asset_6@2x.png';
 import DropdownButton from "../ui/DropDownButton";
 import { Icons } from "../ui/Icons";
 import { cn } from "@/lib/utils";
-import { PATH_AUTH } from "@/routes";
 import SolidButton from "../ui/SolidButton";
 
 export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink = "home" }: { 
@@ -20,10 +17,9 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
  }) {
   const [active, setActive] = useState<string>(activeLink);
   const [isProductOpen, setIsProductOpen] = useState<boolean>(false);
-  const { width } = useWindowDimensions();
 
-  const triggers = {
-    onClick: () => setIsProductOpen(!isProductOpen)
+  const toggleDropdown = () => {
+    setIsProductOpen(!isProductOpen);
   };
   return (
     <Container>
@@ -128,24 +124,21 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                 <div key={item.id}>
                   {item.title === "Products" ? (
                     <>
-                      <div>
-                        <Link
-                          {...triggers}
-                          href=""
+                      <div
+                        onClick={toggleDropdown}
+                        className={cn(
+                          'flex space-x-2 py-4 justify-between items-center text-center focus:outline-none',
+                          isProductOpen ? 'text-teal-500' : 'font-[500] text-[#343434]'
+                        )}
+                      >
+                        <p className="block text-sm px-2 transition duration-300">Products</p>
+                        <Icons.chevronDown 
+                          size={18} 
                           className={cn(
-                            'flex space-x-2 py-4 justify-between text-center focus:outline-none',
-                            isProductOpen ? 'text-teal-500' : 'font-[500] text-[#343434]'
-                          )}
-                        >
-                          <p className="block text-sm px-2 transition duration-300">Products</p>
-                          <Icons.chevronDown 
-                            size={18} 
-                            className={cn(
-                              isProductOpen ? "transform rotate-180" : "",
-                              'mt-1'
-                            )} 
-                          />
-                        </Link>
+                            isProductOpen ? "transform rotate-180" : "",
+                            'mt-1'
+                          )} 
+                        />
                       </div>
                       <hr className="my-2 border-blue-gray-50" />
                       {isProductOpen && (
@@ -193,12 +186,6 @@ export default function Navbar({ showMenu, openNavbar, closeNavbar, activeLink =
                   )}
                 </div>
               ))}
-              {/* <Link
-                href={PATH_AUTH.login}
-                className="block border-2 text-center mt-8 border-teal-500 rounded-[12px] px-[34px] py-[8px]  text-[16px] text-teal-500 font-semibold"
-              >
-                Login
-              </Link> */}
               <Link
                 legacyBehavior
                 passHref

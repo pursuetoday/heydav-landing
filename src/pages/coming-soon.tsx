@@ -7,7 +7,7 @@ import Image from 'next/image';
 import useCountdown from '@/hooks/useCountdown';
 
 export default function ComingSoon() {
-  const { days, hours, minutes, seconds } = useCountdown(new Date('10/7/2023'));
+  const { days, hours, minutes, seconds } = useCountdown(new Date('12/7/2023'));
   return (
     <>
       <Head>
@@ -58,7 +58,7 @@ export default function ComingSoon() {
                 </defs>
               </svg>            
             </div>
-            <div className="text-6xl text-center flex w-full items-center justify-center mt-12">
+            <div className="text-xl xxs:text-4xl sm:text-6xl text-center flex w-full items-center justify-center mt-12">
               <TimeBlock label="Days" value={days} />
               <TimeBlock label="Hours" value={hours} />
               <TimeBlock label="Minutes" value={minutes} />
@@ -80,9 +80,9 @@ const TimeBlock = ({ label, value } : {
   return (
       <div>
           {label === 'Seconds' ? (
-            <div>{value}</div>
+            <div className='ml-2'>{value}</div>
           ) : (
-            <div className={label === 'Days' ? "" : "ml-2"}>{value} : </div>
+            <div className={label === 'Days' ? "" : "ml-2"}>{`${value} : `}</div>
           )}
           <h5 className="opacity-50 text-sm leading-none mr-2">{label}</h5>
       </div>
