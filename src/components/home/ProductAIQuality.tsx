@@ -13,7 +13,7 @@ export default function ProductAIBuddy() {
       <Container>
         <div className="hidden lg:flex lg:relative">
           <div className="absolute rounded-[15px] mt-7 px-5">
-            <div className="w-56 xl:w-[17rem] h-48 absolute bg-teal-500 rounded-[15px] shadow-sm">
+            <div className="w-56 xl:w-[17rem] lg:h-52 xl:h-48 absolute bg-teal-500 rounded-[15px] shadow-sm">
               <div className="flex items-center py-4 px-5">
                 <div className="z-20">
                   <Image 
@@ -95,9 +95,9 @@ export default function ProductAIBuddy() {
         </div>
 
         <div className="flex flex-col justify-center items-center gap-8 my-10 lg:hidden">
-          <div className="md:flex md:gap-8">
+          <div className="sm:flex sm:gap-8">
             <div className="rounded-[15px]">
-              <div className="w-56 h-48 bg-teal-500 rounded-[15px] shadow-sm">
+              <div className="w-full py-6 sm:w-56 sm:h-52 sm:py-0 bg-teal-500 rounded-[15px] shadow-sm">
                 <div className="flex items-center py-4 px-5">
                   <div className="z-20">
                     <Image 
@@ -112,8 +112,8 @@ export default function ProductAIBuddy() {
                 </div>
               </div>
             </div>
-            <div className="rounded-[15px] mt-8 md:mt-0">
-              <div className="w-56 h-52 bg-teal-500 rounded-[15px] shadow-sm">
+            <div className="rounded-[15px] mt-8 sm:mt-0">
+              <div className="w-full py-6 sm:w-56 sm:h-52 sm:py-0 bg-teal-500 rounded-[15px] shadow-sm">
               <div className="flex items-center py-4 px-5">
                 <div className="z-20">
                   <Image 
@@ -129,9 +129,9 @@ export default function ProductAIBuddy() {
             </div>
             </div>
           </div>
-          <div className="md:flex md:gap-8">
+          <div className="sm:flex sm:gap-8">
             <div className="rounded-[15px]">
-              <div className="w-56 h-48 bg-teal-500 rounded-[15px] shadow-sm">
+              <div className="w-full py-6 sm:w-56 sm:h-48 sm:py-0 bg-teal-500 rounded-[15px] shadow-sm">
                 <div className="flex items-center py-4 px-5">
                   <div className="z-20">
                     <Image 
@@ -146,8 +146,8 @@ export default function ProductAIBuddy() {
                 </div>
               </div>
             </div>
-            <div className="rounded-[15px] mt-8 md:mt-0">
-              <div className="w-56 h-48 bg-teal-500 rounded-[15px] shadow-sm">
+            <div className="rounded-[15px] mt-8 sm:mt-0">
+              <div className="w-full py-6 sm:w-56 sm:h-48 sm:py-0 bg-teal-500 rounded-[15px] shadow-sm">
                 <div className="flex items-center py-4 px-5">
                   <div className="z-20">
                     <Image 

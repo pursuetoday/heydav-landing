@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { BASE_URL } from '@/config';
 import { SocialsTypeModal, earlyAccessUser } from '@/types';
 
-const SOCIALS: SocialsTypeModal[] = [
+const socialsArray: SocialsTypeModal[] = [
   {
     id: 1,
     name: 'Facebook',
@@ -41,14 +40,14 @@ function Modal({ showModal, setShowModal, name, list, id }: {
     showModal && (
       <>
         <div
-          style={{ zIndex: 1999 }}
-          className="justify-center  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          style={{ zIndex: 9999 }}
+          className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
         >
           <div className="relative w-auto my-6 mx-auto max-w-3xl">
             <div className="border-0 m-0 md:m-12 lg:m-12 xl:m-12 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none bg-[#EAFAF9]">
-              <div className="flex items-center justify-center mt-10    rounded-t dark:border-gray-600">
-                <h3 className="text-xl   font-semibold text-gray-900 dark:text-white">
-                  Thank you, {name}
+              <div className="flex items-center justify-center mt-10 rounded-t">
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Thank you
                 </h3>
               </div>
               <div
@@ -77,11 +76,11 @@ function Modal({ showModal, setShowModal, name, list, id }: {
 
               <div className="p-6 my-5 lg:min-[567px] md:min-[567px]">
                 <div className="flex flex-row justify-center gap-3">
-                  {SOCIALS.map(item => (
+                  {socialsArray && socialsArray.map(item => (
                     <span
                       role="presentation"
                       key={item.id}
-                      className="border border-[#F1F1F1] rounded-full p-1 cursor-pointer  ml-[16px] "
+                      className="border border-[#F1F1F1] rounded-full p-1 cursor-pointer ml-[16px]"
                       onClick={() => 
                         window.open(item.getHref(url), '_blank')
                       }
@@ -90,24 +89,24 @@ function Modal({ showModal, setShowModal, name, list, id }: {
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center justify-center mt-7 mb-7   rounded-t dark:border-gray-600">
-                  <h3 className="text-xl   font-semibold text-gray-900 dark:text-white">
+                <div className="flex items-center justify-center mt-7 mb-7 rounded-t">
+                  <h3 className="text-xl font-semibold text-gray-900">
                     Waiting list
                   </h3>
                 </div>
-                <div className="max-h-[250px]  min-h-[10rem] overflow-y-hidden">
-                  <table className="w-full max-h-[200px] ring-1 ring-gray-200 rounded-md text-sm text-left text-gray-500 dark:text-gray-400">
+                <div className="max-h-[250px] min-h-[10rem] overflow-y-hidden">
+                  <table className="w-full max-h-[200px] ring-1 ring-gray-200 rounded-md text-sm text-left text-gray-500">
                     <thead>
-                      <tr className="border  bg-lightPurpleBg dark:border-gray-700">
+                      <tr className="border bg-lightPurpleBg">
                         <th
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                         >
                           Waitlist ID
                         </th>
                         <th
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                         >
                           Name
                         </th>
@@ -119,15 +118,15 @@ function Modal({ showModal, setShowModal, name, list, id }: {
                         return (
                           <tr
                             key={item._id}
-                            className="border-b  dark:border-gray-700"
+                            className="border-b"
                           >
                             <th
                               scope="row"
-                              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                             >
                               {item.count}
                             </th>
-                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                               {waitListName || '-'}
                             </td>
                           </tr>

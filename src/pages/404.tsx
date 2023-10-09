@@ -26,7 +26,7 @@ export default function Page404() {
                 </div>
             </Link>
         </nav>
-        <div className='custom-container text-center flex justify-between items-center flex-col px-10 py-4 pb-10'>
+        <div className='text-center flex justify-between items-center flex-col px-10 py-4 pb-10'>
             <h3>Sorry, page not found!</h3>
             <p className='mt-5 md:w-3/4'>
                 Sorry, we couldn't find the page you're looking for. Perhaps you've mistyped the URL? Be sure to check your spelling.
