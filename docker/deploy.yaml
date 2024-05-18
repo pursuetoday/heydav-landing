@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: heydev-landing
+  name: heydev-www
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: heydev-landing
+      name: heydev-www
   template:
     metadata:
       labels:
-        name: heydev-landing
+        name: heydev-www
     spec:
       containers:
-      - image: heydev.azurecr.io/heydev-landing
-        imagePullPolicy: Always
-        name: heydev-landing
-        envFrom:
-        - secretRef:
-            name: "config-heydev-landing"
+        - image: heydevregistry.azurecr.io/www
+          imagePullPolicy: Always
+          name: heydev-www
+          envFrom:
+            - secretRef:
+                name: 'config-heydev-www'
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: heydev-landing
+  name: heydev-www
   labels:
-    name: heydev-landing
+    name: heydev-www
 spec:
   ports:
-  - port: 3000
-    targetPort: 3000
+    - port: 3000
+      targetPort: 3000
   selector:
-    name: heydev-landing
+    name: heydev-www
 ---
